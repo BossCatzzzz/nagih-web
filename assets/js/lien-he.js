@@ -49,7 +49,7 @@ function buildMessage() {
   const nameValue = customerName.value.trim();
   const phoneValue = phone.value.trim();
   const websiteValue = website.value.trim();
-  return `Chào NAGIH GRAPHY, mình muốn đặt lịch chụp.\n\n- Thợ: ${photographerValue}\n- Chụp: ${duration}\n- Số người chụp: ${getPeopleText()}\n- Ngày chụp dự kiến: ${dateValue}\n- Tỉnh / thành: ${provinceValue}\n- Địa điểm: ${locationValue}\n- Chụp tối đến 20h: ${evening.checked ? 'Có' : 'Không'}\n- Concept mong muốn: ${conceptValue || 'chưa có'}\n\n- Tên: ${nameValue || 'chưa cung cấp'}\n- Số điện thoại: ${phoneValue || 'chưa cung cấp'}\n- Website: ${websiteValue || 'không có'}`;
+  return `Chào demo studio, mình muốn đặt lịch chụp.\n\n- Thợ: ${photographerValue}\n- Chụp: ${duration}\n- Số người chụp: ${getPeopleText()}\n- Ngày chụp dự kiến: ${dateValue}\n- Tỉnh / thành: ${provinceValue}\n- Địa điểm: ${locationValue}\n- Chụp tối đến 20h: ${evening.checked ? 'Có' : 'Không'}\n- Concept mong muốn: ${conceptValue || 'chưa có'}\n\n- Tên: ${nameValue || 'chưa cung cấp'}\n- Số điện thoại: ${phoneValue || 'chưa cung cấp'}\n- Website: ${websiteValue || 'không có'}`;
 }
 
 function updateMessage() { if (messageBox) messageBox.textContent = buildMessage(); }
@@ -97,13 +97,13 @@ copyButton?.addEventListener('click', async () => {
   }
 });
 
-if (window.NAGIH_DATA?.ready) {
-  window.NAGIH_DATA.ready.then(({ photographers: data }) => {
+if (window.DEMO_DATA?.ready) {
+  window.DEMO_DATA.ready.then(({ photographers: data }) => {
     populatePhotographerOptions(data);
     updateMessage();
   });
 }
-window.addEventListener('nagih:data-updated', event => {
+window.addEventListener('demo:data-updated', event => {
   populatePhotographerOptions(event.detail.photographers);
   updateMessage();
 });

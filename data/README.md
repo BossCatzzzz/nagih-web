@@ -1,4 +1,4 @@
-# NAGIH data flow
+# demo studio data flow
 
 ## Runtime
 
@@ -34,7 +34,7 @@ Runtime pages no longer load `data/photographers.js`. The legacy hard-coded phot
 Runtime flow:
 1. `latest.json` is loaded first for the fast initial render.
 2. Google Sheets Apps Script API is requested in the background.
-3. If the live data differs, `nagih:data-updated` refreshes the current page.
+3. If the live data differs, `demo:data-updated` refreshes the current page.
 
 Keep the public Apps Script `/exec` URL configured in `data/data-source.js` when deploying. Do not put private credentials in client-side code.
 

@@ -85,13 +85,13 @@ resetButton.addEventListener('click', () => {
   filterPhotographers();
 });
 
-if (window.NAGIH_DATA?.ready) {
-  window.NAGIH_DATA.ready.then(({ photographers: data }) => {
+if (window.DEMO_DATA?.ready) {
+  window.DEMO_DATA.ready.then(({ photographers: data }) => {
     photographers = data;
     filterPhotographers();
   });
 }
-window.addEventListener('nagih:data-updated', event => {
+window.addEventListener('demo:data-updated', event => {
   photographers = event.detail.photographers;
   filterPhotographers();
 });

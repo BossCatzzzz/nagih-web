@@ -1,6 +1,6 @@
 category,kind,level,title,price,description,peopleLabel,linkText,sort
-founder,tier,Hạng 01,Founder,2800000,"Founder & Photographer của NAGIH. Trực tiếp thực hiện những booking yêu cầu cao về concept, hình ảnh và trải nghiệm.",thợ,Xem thợ →,1
+founder,tier,Hạng 01,Founder,2800000,"Founder & Photographer của demo studio. Trực tiếp thực hiện những booking yêu cầu cao về concept, hình ảnh và trải nghiệm.",thợ,Xem thợ →,1
 ekip1,tier,Hạng 02,Ekip 1,2500000,"Nhóm photographer chủ lực, giàu kinh nghiệm và có phong cách cá nhân rõ nét.",thợ,Xem thợ →,2
-ekip23,tier,Hạng 03,"Ekip 2, 3",2200000,"Những photographer trẻ của NAGIH, đa dạng phong cách, bắt trend nhanh và được vận hành theo cùng tiêu chuẩn của ekip.",thợ,Xem thợ →,3
+ekip23,tier,Hạng 03,"Ekip 2, 3",2200000,"Những photographer trẻ của demo studio, đa dạng phong cách, bắt trend nhanh và được vận hành theo cùng tiêu chuẩn của ekip.",thợ,Xem thợ →,3
 takecare,tier,Hỗ trợ,Take Care,600000,"Nhân sự đồng hành xuyên suốt buổi chụp: hỗ trợ trang phục, tóc, phụ kiện, chỉnh dáng, giữ đồ và các nhu cầu phát sinh.",thợ,Xem thợ →,4
 evening,addon,,Chụp thêm buổi tối,500000,"Áp dụng khi chụp đến 20h.",,,5

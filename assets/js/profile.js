@@ -78,9 +78,9 @@ function renderProfile(data) {
     document.querySelector('main').innerHTML = '<div class="container"><p>Không tìm thấy photographer.</p></div>';
     return;
   }
-  document.title = `${photographer.name} — thợ chụp ${photographer.city} · NAGIH GRAPHY`;
+  document.title = `${photographer.name} — thợ chụp ${photographer.city} · demo studio`;
   const description = document.querySelector('meta[name="description"]');
-  if (description) description.content = `Thông tin photographer ${photographer.name} của NAGIH GRAPHY.`;
+  if (description) description.content = `Thông tin photographer ${photographer.name} của demo studio.`;
   setText('[data-profile="name"]', photographer.name);
   setText('[data-profile="level"]', photographer.level);
   setText('[data-profile="meta"]', `${photographer.city} · ★ ${photographer.rating}${photographer.shoots ? ` · ${photographer.shoots} buổi đã chụp` : ''}`);
@@ -97,7 +97,7 @@ function renderProfile(data) {
   document.querySelectorAll('[data-profile="booking"]').forEach(el => { el.href = bookingUrl; });
 }
 
-if (window.NAGIH_DATA?.ready) {
-  window.NAGIH_DATA.ready.then(({ photographers: data }) => renderProfile(data));
+if (window.DEMO_DATA?.ready) {
+  window.DEMO_DATA.ready.then(({ photographers: data }) => renderProfile(data));
 }
-window.addEventListener('nagih:data-updated', event => renderProfile(event.detail.photographers));
+window.addEventListener('demo:data-updated', event => renderProfile(event.detail.photographers));

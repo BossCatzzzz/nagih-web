@@ -1,10 +1,21 @@
 /*
- * NAGIH data source — hybrid production flow.
+ * Demo data source — hybrid production flow.
  * Fast path: data/latest.json -> render immediately.
  * Freshness path: Google Sheets Apps Script API -> compare -> update UI.
  */
 (function () {
   const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbzrsEcjNERb_s7jj1XLGZDXPA7COSaWBXDCSwxG7TABxRtNo6nE3JPk_jqyYpqbsCn_/exec';
+
+  function sanitizeBrand(value) {
+    if (typeof value === 'string') {
+      return value.replace(/NAGIH GRAPHY|NAGIH/gi, 'demo studio');
+    }
+    if (Array.isArray(value)) return value.map(sanitizeBrand);
+    if (value && typeof value === 'object') {
+      return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, sanitizeBrand(item)]));
+    }
+    return value;
+  }
 
   function normalizePhotographer(p) {
     if (!p || typeof p !== 'object') return null;
@@ -53,6 +64,8 @@
   }
 
   function normalizePayload(data, fallback = {}) {
+    data = sanitizeBrand(data || {});
+    fallback = sanitizeBrand(fallback || {});
     return {
       photographers: normalizeList(data?.photographers),
       priceTiers: normalizePriceTiers(data?.priceTiers?.length ? data.priceTiers : fallback.priceTiers),
@@ -87,38 +100,38 @@
   const snapshotReady = loadStaticSnapshot()
     .then(snapshot => ({ source: 'static-json', ...snapshot }))
     .catch(error => {
-      console.warn('[NAGIH DATA] Không tải được latest.json:', error);
+      console.warn('[DEMO DATA] Không tải được latest.json:', error);
       return { source: 'empty-fallback', photographers: [], priceTiers: [], travelFees: [] };
     });
 
-  window.NAGIH_DATA = {
+  window.DEMO_DATA = {
     source: 'loading', photographers: [], priceTiers: [], travelFees: [],
     ready: snapshotReady, refresh: Promise.resolve(null)
   };
 
   snapshotReady.then(snapshot => {
-    window.NAGIH_DATA.source = snapshot.source;
-    window.NAGIH_DATA.photographers = snapshot.photographers;
-    window.NAGIH_DATA.priceTiers = snapshot.priceTiers;
-    window.NAGIH_DATA.travelFees = snapshot.travelFees;
-    console.info(`[NAGIH DATA] initial=${snapshot.source}, photographers=${snapshot.photographers.length}, priceTiers=${snapshot.priceTiers.length}, travelFees=${snapshot.travelFees.length}`);
+    window.DEMO_DATA.source = snapshot.source;
+    window.DEMO_DATA.photographers = snapshot.photographers;
+    window.DEMO_DATA.priceTiers = snapshot.priceTiers;
+    window.DEMO_DATA.travelFees = snapshot.travelFees;
+    console.info(`[DEMO DATA] initial=${snapshot.source}, photographers=${snapshot.photographers.length}, priceTiers=${snapshot.priceTiers.length}, travelFees=${snapshot.travelFees.length}`);
 
     if (!GOOGLE_SHEETS_API_URL.trim()) return;
     const before = fingerprint(snapshot);
-    window.NAGIH_DATA.refresh = loadGoogleSheets(snapshot).then(fresh => {
+    window.DEMO_DATA.refresh = loadGoogleSheets(snapshot).then(fresh => {
       const after = fingerprint(fresh);
       if (after === before) {
-        console.info('[NAGIH DATA] Google Sheets: không có thay đổi.');
+        console.info('[DEMO DATA] Google Sheets: không có thay đổi.');
         return;
       }
-      window.NAGIH_DATA.source = 'google-sheets-live';
-      window.NAGIH_DATA.photographers = fresh.photographers;
-      window.NAGIH_DATA.priceTiers = fresh.priceTiers;
-      window.NAGIH_DATA.travelFees = fresh.travelFees;
-      console.info(`[NAGIH DATA] Google Sheets có dữ liệu mới: photographers=${fresh.photographers.length}, priceTiers=${fresh.priceTiers.length}, travelFees=${fresh.travelFees.length}`);
-      window.dispatchEvent(new CustomEvent('nagih:data-updated', { detail: fresh }));
+      window.DEMO_DATA.source = 'google-sheets-live';
+      window.DEMO_DATA.photographers = fresh.photographers;
+      window.DEMO_DATA.priceTiers = fresh.priceTiers;
+      window.DEMO_DATA.travelFees = fresh.travelFees;
+      console.info(`[DEMO DATA] Google Sheets có dữ liệu mới: photographers=${fresh.photographers.length}, priceTiers=${fresh.priceTiers.length}, travelFees=${fresh.travelFees.length}`);
+      window.dispatchEvent(new CustomEvent('demo:data-updated', { detail: fresh }));
     }).catch(error => {
-      console.warn('[NAGIH DATA] Google Sheets background refresh thất bại; giữ latest.json:', error);
+      console.warn('[DEMO DATA] Google Sheets background refresh thất bại; giữ latest.json:', error);
     });
   });
 })();

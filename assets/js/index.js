@@ -72,7 +72,7 @@ function renderHome(photographers) {
   renderFeatured(photographers);
 }
 
-if (window.NAGIH_DATA?.ready) {
-  window.NAGIH_DATA.ready.then(({ photographers }) => renderHome(photographers));
+if (window.DEMO_DATA?.ready) {
+  window.DEMO_DATA.ready.then(({ photographers }) => renderHome(photographers));
 }
-window.addEventListener('nagih:data-updated', event => renderHome(event.detail.photographers));
+window.addEventListener('demo:data-updated', event => renderHome(event.detail.photographers));

@@ -1,5 +1,5 @@
 /**
- * NAGIH GRAPHY — Google Sheets → JSON API
+ * demo studio — Google Sheets → JSON API
  * Sheets: Photographers, PriceTiers, TravelFees
  */
 const SHEET_NAMES = { photographers: 'Photographers', priceTiers: 'PriceTiers', travelFees: 'TravelFees' };

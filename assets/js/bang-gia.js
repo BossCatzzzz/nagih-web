@@ -84,5 +84,5 @@ function renderAll(data) {
 locationSelect?.addEventListener('change', updateTravelPrice);
 photographerCount?.addEventListener('change', updateTravelPrice);
 
-if (window.NAGIH_DATA?.ready) window.NAGIH_DATA.ready.then(renderAll);
-window.addEventListener('nagih:data-updated', event => renderAll(event.detail));
+if (window.DEMO_DATA?.ready) window.DEMO_DATA.ready.then(renderAll);
+window.addEventListener('demo:data-updated', event => renderAll(event.detail));

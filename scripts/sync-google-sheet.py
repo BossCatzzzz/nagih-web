@@ -9,7 +9,7 @@ if not API_URL:
     sys.exit(1)
 
 try:
-    req = urllib.request.Request(API_URL, headers={'User-Agent': 'NAGIH-GoogleSheet-Sync/1.0'})
+    req = urllib.request.Request(API_URL, headers={'User-Agent': 'demo studio-GoogleSheet-Sync/1.0'})
     with urllib.request.urlopen(req, timeout=30) as response:
         if response.status != 200:
             raise RuntimeError(f'HTTP {response.status}')
