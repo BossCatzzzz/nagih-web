@@ -18,8 +18,7 @@ function photographerHref(p) {
 
 function photographerImagePath(p, filename) {
   if (!filename) return '';
-  if (/^(https?:\/\/|\.\.\/|\.\/|\/)/.test(filename)) return filename;
-  return `./assets/images/photographers/${p.slug}/${filename}`;
+  return /^https?:\/\//i.test(String(filename || '')) ? filename : '';
 }
 
 function renderCardImage(p) {

@@ -18,8 +18,13 @@ except Exception as exc:
     print(f'ERROR: cannot fetch Google Sheets API: {exc}')
     sys.exit(1)
 
-if not isinstance(payload, dict) or not isinstance(payload.get('photographers'), list):
-    print('ERROR: API response does not contain photographers[].')
+if (
+    not isinstance(payload, dict)
+    or not isinstance(payload.get('photographers'), list)
+    or not isinstance(payload.get('priceTiers'), list)
+    or not isinstance(payload.get('travelFees'), list)
+):
+    print('ERROR: API response must contain photographers[], priceTiers[] and travelFees[].')
     sys.exit(1)
 
 # Keep the API payload as the static snapshot. The website consumes this file.
@@ -28,4 +33,4 @@ with open(OUTPUT, 'w', encoding='utf-8') as f:
     json.dump(payload, f, ensure_ascii=False, indent=2)
     f.write('\n')
 
-print(f'Synced {len(payload["photographers"])} photographers to {OUTPUT}')
+print(f'Synced {len(payload["photographers"])} photographers, {len(payload["priceTiers"])} price items, {len(payload["travelFees"])} travel fees to {OUTPUT}')

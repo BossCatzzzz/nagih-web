@@ -8,8 +8,7 @@ function setText(selector, value, fallback = '') {
 
 function photographerImagePath(slugValue, filename) {
   if (!filename) return '';
-  if (/^(https?:\/\/|\.\.\/|\.\/|\/)/.test(filename)) return filename;
-  return `../assets/images/photographers/${slugValue}/${filename}`;
+  return /^https?:\/\//i.test(String(filename || '')) ? filename : '';
 }
 
 function renderGallery(items) {

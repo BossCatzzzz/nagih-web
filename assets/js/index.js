@@ -3,8 +3,7 @@ const heroPhotographerButton = document.getElementById('heroPhotographerButton')
 
 function featuredImagePath(p) {
   if (!p.avatar) return '';
-  if (/^(https?:\/\/|\.\.\/|\.\/|\/)/.test(p.avatar)) return p.avatar;
-  return `./assets/images/photographers/${p.slug}/${p.avatar}`;
+  return /^https?:\/\//i.test(String(p.avatar || '')) ? p.avatar : '';
 }
 
 function featuredHref(p) {

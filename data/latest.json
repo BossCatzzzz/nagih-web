@@ -1,225 +1,205 @@
 {
-  "version": 1,
-  "source": "google-sheets",
   "photographers": [
     {
       "slug": "bear",
+      "featured": true,
       "name": "Bear",
       "level": "Ekip 1",
-      "rating": 5,
-      "shoots": 132,
+      "rating": "5.0",
+      "shoots": "132",
       "city": "Hà Nội",
-      "price": 2500000,
-      "featured": true,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "2.500.000đ",
       "categories": [
         "ekip1",
         "group",
         "province"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "tiger",
+      "featured": true,
       "name": "Tiger",
       "level": "Ekip 1",
-      "rating": 420260000000700,
-      "shoots": 182,
+      "rating": "4.9",
+      "shoots": "182",
       "city": "Hà Nội",
-      "price": 2500000,
-      "featured": true,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "2.500.000đ",
       "categories": [
         "ekip1",
         "group",
         "province"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "whale",
+      "featured": true,
       "name": "Whale",
       "level": "Ekip 1",
-      "rating": 5,
-      "shoots": 111,
+      "rating": "5.0",
+      "shoots": "111",
       "city": "Hà Nội",
-      "price": 2500000,
-      "featured": true,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "2.500.000đ",
       "categories": [
         "ekip1",
         "group"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "shark",
+      "featured": true,
       "name": "Shark",
       "level": "Ekip 1",
-      "rating": 5,
-      "shoots": 169,
+      "rating": "5.0",
+      "shoots": "169",
       "city": "Hà Nội",
-      "price": 2500000,
-      "featured": false,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "2.500.000đ",
       "categories": [
         "ekip1",
         "province"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "fox",
+      "featured": false,
       "name": "Fox",
       "level": "Founder",
-      "rating": 5,
-      "shoots": 95,
+      "rating": "5.0",
+      "shoots": "95",
       "city": "Hà Nội",
-      "price": 3000000,
-      "featured": false,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "3.000.000đ",
       "categories": [
         "founder",
         "group",
         "province"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "panda",
+      "featured": false,
       "name": "Panda",
       "level": "Ekip 2, 3",
-      "rating": 420260000000700,
-      "shoots": 74,
+      "rating": "4.9",
+      "shoots": "74",
       "city": "Hà Nội",
-      "price": 1980000,
-      "featured": false,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "1.980.000đ",
       "categories": [
         "ekip23",
         "group"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
+      "gallery": [],
+      "albumUrl": "",
       "avatar": "avatar.jpg",
       "cover": "cover.jpg",
-      "gallery": [
-        "https://image.api.playstation.com/vulcan/img/cfn/11307UWe-qhLJDn9Ox16fwIbg1bEIqa36FAJm0VnUHxZ0ww0oGpuPrnxM7JzXtYiryU3n5qnkO30Uv2cxuWOknfQa6o3tpVb.png"
-      ],
-      "albumUrl": "",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "wolf",
+      "featured": false,
       "name": "Wolf",
       "level": "Ekip 2, 3",
-      "rating": 420260000000700,
-      "shoots": 68,
+      "rating": "4.9",
+      "shoots": "68",
       "city": "Hà Nội",
-      "price": 1980000,
-      "featured": false,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "1.980.000đ",
       "categories": [
         "ekip23",
         "province"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "cat",
+      "featured": false,
       "name": "Cat",
       "level": "Ekip 2, 3",
-      "rating": 5,
-      "shoots": 523,
+      "rating": "5.0",
+      "shoots": "323",
       "city": "Hà Nội",
-      "price": 4444,
-      "featured": true,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "2.200.000đ",
       "categories": [
         "ekip23",
         "group",
         "province"
       ],
+      "profile": true,
       "style": "Ekip 2, 3: Những photographer trẻ của NAGIH, đa dạng phong cách, bắt trend nhanh và được vận hành theo cùng tiêu chuẩn của ekip.",
       "description": "Cat phù hợp với các nhu cầu chụp kỷ yếu, chụp nhóm, chụp cá nhân và các booking cần đi tỉnh.",
       "tags": [
@@ -229,8 +209,6 @@
         "Chụp cá nhân",
         "Nhận đi tỉnh"
       ],
-      "avatar": "https://image.api.playstation.com/vulcan/img/cfn/11307UWe-qhLJDn9Ox16fwIbg1bEIqa36FAJm0VnUHxZ0ww0oGpuPrnxM7JzXtYiryU3n5qnkO30Uv2cxuWOknfQa6o3tpVb.png",
-      "cover": "https://static.vecteezy.com/system/resources/thumbnails/052/085/118/small/a-row-of-adorable-kittens-of-various-colors-and-patterns-peek-over-a-white-surface-their-eyes-wide-with-curiosity-photo.jpeg",
       "gallery": [
         "gallery-01.jpg",
         "gallery-02.jpg",
@@ -238,169 +216,379 @@
         "gallery-04.jpg"
       ],
       "albumUrl": "",
-      "zalo": "",
-      "facebook": "",
-      "instagram": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
       "services": [
         {
-          "name": "[object Object]",
-          "value": ""
+          "name": "Súng bắn bong bóng / khói màu",
+          "value": "Có sẵn trong gói"
         },
         {
-          "name": "[object Object]",
-          "value": ""
+          "name": "Đèn (flash & đèn liên tục)",
+          "value": "Có sẵn trong gói"
         },
         {
-          "name": "[object Object]",
-          "value": ""
+          "name": "Hỗ trợ trang phục / phụ kiện",
+          "value": "Không có"
         },
         {
-          "name": "[object Object]",
-          "value": ""
+          "name": "Trợ lý đi kèm",
+          "value": "Không có"
         },
         {
-          "name": "[object Object]",
-          "value": ""
+          "name": "Trả file ảnh gốc",
+          "value": "Không có"
         }
-      ]
+      ],
+      "zalo": "",
+      "facebook": "",
+      "instagram": ""
     },
     {
       "slug": "mouse",
+      "featured": false,
       "name": "Mouse",
       "level": "Take Care",
-      "rating": 420260000000700,
-      "shoots": 46,
+      "rating": "4.8",
+      "shoots": "47",
       "city": "Hà Nội",
-      "price": 1980000,
-      "featured": false,
-      "active": true,
-      "profile": true,
-      "placeholder": false,
+      "price": "1.980.000đ",
       "categories": [
         "takecare",
         "province"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "demo-01",
-      "name": "Photographer",
-      "level": "Ekip 1",
-      "rating": 420260000000700,
-      "shoots": 0,
-      "city": "Hà Nội",
-      "price": 2500000,
       "featured": false,
-      "active": true,
-      "profile": true,
+      "name": "Photographer",
       "placeholder": true,
+      "level": "Ekip 1",
+      "rating": "4.9",
+      "shoots": "",
+      "city": "Hà Nội",
+      "price": "2.500.000đ",
       "categories": [
         "ekip1"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "demo-02",
-      "name": "Photographer",
-      "level": "Ekip 2, 3",
-      "rating": 420260000000700,
-      "shoots": 0,
-      "city": "Hà Nội",
-      "price": 1980000,
       "featured": false,
-      "active": true,
-      "profile": true,
+      "name": "Photographer",
       "placeholder": true,
+      "level": "Ekip 2, 3",
+      "rating": "4.9",
+      "shoots": "",
+      "city": "Hà Nội",
+      "price": "1.980.000đ",
       "categories": [
         "ekip23"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "demo-03",
-      "name": "Photographer",
-      "level": "Founder",
-      "rating": 5,
-      "shoots": 0,
-      "city": "Hà Nội",
-      "price": 3000000,
       "featured": false,
-      "active": true,
-      "profile": true,
+      "name": "Photographer",
       "placeholder": true,
+      "level": "Founder",
+      "rating": "5.0",
+      "shoots": "",
+      "city": "Hà Nội",
+      "price": "3.000.000đ",
       "categories": [
         "founder"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
     },
     {
       "slug": "demo-04",
-      "name": "Photographer",
-      "level": "Take Care",
-      "rating": 420260000000700,
-      "shoots": 0,
-      "city": "Hà Nội",
-      "price": 1980000,
       "featured": false,
-      "active": true,
-      "profile": true,
+      "name": "Photographer",
       "placeholder": true,
+      "level": "Take Care",
+      "rating": "4.8",
+      "shoots": "",
+      "city": "Hà Nội",
+      "price": "1.980.000đ",
       "categories": [
         "takecare",
         "group",
         "province"
       ],
+      "profile": true,
       "style": "",
       "description": "",
       "tags": [],
-      "avatar": "avatar.jpg",
-      "cover": "cover.jpg",
       "gallery": [],
       "albumUrl": "",
+      "avatar": "avatar.jpg",
+      "cover": "cover.jpg",
+      "services": [],
       "zalo": "",
       "facebook": "",
-      "instagram": "",
-      "services": []
+      "instagram": ""
+    }
+  ],
+  "version": 2,
+  "priceTiers": [
+    {
+      "category": "founder",
+      "kind": "tier",
+      "level": "Hạng 01",
+      "title": "Founder",
+      "price": 2800000,
+      "description": "Founder & Photographer của NAGIH. Trực tiếp thực hiện những booking yêu cầu cao về concept, hình ảnh và trải nghiệm.",
+      "peopleLabel": "thợ",
+      "linkText": "Xem thợ →",
+      "sort": 1
+    },
+    {
+      "category": "ekip1",
+      "kind": "tier",
+      "level": "Hạng 02",
+      "title": "Ekip 1",
+      "price": 2500000,
+      "description": "Nhóm photographer chủ lực, giàu kinh nghiệm và có phong cách cá nhân rõ nét.",
+      "peopleLabel": "thợ",
+      "linkText": "Xem thợ →",
+      "sort": 2
+    },
+    {
+      "category": "ekip23",
+      "kind": "tier",
+      "level": "Hạng 03",
+      "title": "Ekip 2, 3",
+      "price": 2200000,
+      "description": "Những photographer trẻ của NAGIH, đa dạng phong cách, bắt trend nhanh và được vận hành theo cùng tiêu chuẩn của ekip.",
+      "peopleLabel": "thợ",
+      "linkText": "Xem thợ →",
+      "sort": 3
+    },
+    {
+      "category": "takecare",
+      "kind": "tier",
+      "level": "Hỗ trợ",
+      "title": "Take Care",
+      "price": 600000,
+      "description": "Nhân sự đồng hành xuyên suốt buổi chụp: hỗ trợ trang phục, tóc, phụ kiện, chỉnh dáng, giữ đồ và các nhu cầu phát sinh.",
+      "peopleLabel": "thợ",
+      "linkText": "Xem thợ →",
+      "sort": 4
+    },
+    {
+      "category": "evening",
+      "kind": "addon",
+      "level": "",
+      "title": "Chụp thêm buổi tối",
+      "price": 500000,
+      "description": "Áp dụng khi chụp đến 20h.",
+      "peopleLabel": "",
+      "linkText": "",
+      "sort": 5
+    }
+  ],
+  "travelFees": [
+    {
+      "place": "Hà Nội — 2 địa điểm nội thành",
+      "fee": 100000,
+      "displayFee": "100.000đ",
+      "note": "Áp dụng khi 2 điểm chụp cách nhau trên 5km.",
+      "sort": 1
+    },
+    {
+      "place": "Hà Nội — ngoại thành",
+      "fee": 200000,
+      "displayFee": "200.000đ",
+      "note": "Chỉ chụp tại trường.",
+      "sort": 2
+    },
+    {
+      "place": "Vĩnh Phúc",
+      "fee": 300000,
+      "displayFee": "300.000đ",
+      "note": "",
+      "sort": 3
+    },
+    {
+      "place": "Bắc Ninh",
+      "fee": 300000,
+      "displayFee": "300.000đ",
+      "note": "",
+      "sort": 4
+    },
+    {
+      "place": "Lạng Sơn",
+      "fee": 800000,
+      "displayFee": "800.000đ",
+      "note": "",
+      "sort": 5
+    },
+    {
+      "place": "Hải Dương",
+      "fee": 400000,
+      "displayFee": "400.000đ",
+      "note": "",
+      "sort": 6
+    },
+    {
+      "place": "Thái Nguyên",
+      "fee": 500000,
+      "displayFee": "500.000đ",
+      "note": "",
+      "sort": 7
+    },
+    {
+      "place": "Hải Phòng",
+      "fee": 600000,
+      "displayFee": "600.000đ",
+      "note": "Huyện xa trung tâm có thể chênh thêm.",
+      "sort": 8
+    },
+    {
+      "place": "Hạ Long",
+      "fee": 700000,
+      "displayFee": "700.000đ",
+      "note": "",
+      "sort": 9
+    },
+    {
+      "place": "Quảng Ninh",
+      "fee": 600000,
+      "displayFee": "600.000đ",
+      "note": "",
+      "sort": 10
+    },
+    {
+      "place": "Phú Thọ",
+      "fee": 600000,
+      "displayFee": "600.000đ",
+      "note": "",
+      "sort": 11
+    },
+    {
+      "place": "Sơn La",
+      "fee": 800000,
+      "displayFee": "800.000đ",
+      "note": "",
+      "sort": 12
+    },
+    {
+      "place": "Lào Cai",
+      "fee": 900000,
+      "displayFee": "900.000đ",
+      "note": "",
+      "sort": 13
+    },
+    {
+      "place": "Tuyên Quang",
+      "fee": 800000,
+      "displayFee": "800.000đ",
+      "note": "",
+      "sort": 14
+    },
+    {
+      "place": "Bắc Kạn",
+      "fee": 800000,
+      "displayFee": "800.000đ",
+      "note": "",
+      "sort": 15
+    },
+    {
+      "place": "Thanh Hoá",
+      "fee": 800000,
+      "displayFee": "800.000đ",
+      "note": "",
+      "sort": 16
+    },
+    {
+      "place": "Ninh Bình",
+      "fee": 500000,
+      "displayFee": "500.000đ – 600.000đ",
+      "note": "Xa trung tâm thành phố: 600.000đ.",
+      "sort": 17
+    },
+    {
+      "place": "Nghệ An",
+      "fee": 950000,
+      "displayFee": "900.000đ – 1.000.000đ",
+      "note": "Huyện xa trung tâm có thể cao hơn do cần lưu trú qua đêm.",
+      "sort": 18
+    },
+    {
+      "place": "Hà Tĩnh",
+      "fee": 1050000,
+      "displayFee": "900.000đ – 1.200.000đ",
+      "note": "Tuỳ địa điểm và yêu cầu lưu trú.",
+      "sort": 19
+    },
+    {
+      "place": "Lai Châu",
+      "fee": 1000000,
+      "displayFee": "800.000đ – 1.200.000đ",
+      "note": "Huyện xa trung tâm có thể cao hơn.",
+      "sort": 20
+    },
+    {
+      "place": "Bắc Giang",
+      "fee": 500000,
+      "displayFee": "500.000đ",
+      "note": "",
+      "sort": 21
+    },
+    {
+      "place": "Hà Nam",
+      "fee": 500000,
+      "displayFee": "500.000đ",
+      "note": "",
+      "sort": 22
     }
   ]
 }
