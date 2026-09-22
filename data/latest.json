@@ -463,8 +463,8 @@
   "travelFees": [
     {
       "place": "Hà Nội — 2 địa điểm nội thành",
-      "fee": 101000,
-      "displayFee": "101.000đ",
+      "fee": 100000,
+      "displayFee": "100.000đ",
       "note": "Áp dụng khi 2 địa điểm chụp cách nhau trên 5km.",
       "sort": 1
     },
