@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chọn thợ — NAGIH GRAPHY</title>
+    <meta
+        name="description"
+        content="Tìm và lựa chọn photographer phù hợp với phong cách chụp của bạn."
+    >
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/tho.css">
+</head>
+
+<body>
+
+<!-- =============================================================
+     HEADER
+============================================================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a href="./index.html" class="brand">
+            NAGIH GRAPHY
+        </a>
+
+        <nav class="nav-right">
+
+            <a
+                href="./bang-gia.html"
+                class="nav-link"
+            >
+                Bảng giá
+            </a>
+
+            <a
+                href="./lien-he.html"
+                class="nav-cta"
+            >
+                Đặt lịch
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- =============================================================
+     PAGE HEADER
+============================================================= -->
+
+<section class="page-header">
+
+    <div class="container">
+
+        <div class="page-header-grid">
+
+            <div>
+
+                <div class="eyebrow">
+                    NAGIH GRAPHY
+                </div>
+
+                <h1 class="page-title">
+                    Chọn thợ<br>
+                    <span>theo vibe.</span>
+                </h1>
+
+            </div>
+
+            <p class="page-description">
+                Mỗi photographer có một phong cách riêng.
+                Xem portfolio, số buổi đã chụp, khu vực hoạt động
+                và mức giá trước khi quyết định.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     SEARCH + FILTER
+============================================================= -->
+
+<section class="filter-area">
+
+    <div class="container">
+
+        <div class="filter-box">
+
+            <div class="search-row">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="Tìm theo tên photographer..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    id="resetButton"
+                >
+                    Xóa bộ lọc
+                </button>
+
+            </div>
+
+
+            <div class="filters">
+
+                <button
+                    class="filter-chip active"
+                    data-filter="all"
+                >
+                    Tất cả
+                </button>
+
+                <button
+                    class="filter-chip"
+                    data-filter="founder"
+                >
+                    Founder
+                </button>
+
+                <button
+                    class="filter-chip"
+                    data-filter="ekip1"
+                >
+                    Ekip 1
+                </button>
+
+                <button
+                    class="filter-chip"
+                    data-filter="ekip23"
+                >
+                    Ekip 2, 3
+                </button>
+
+                <button
+                    class="filter-chip"
+                    data-filter="takecare"
+                >
+                    Take Care
+                </button>
+
+                <button
+                    class="filter-chip"
+                    data-filter="group"
+                >
+                    Chụp nhóm
+                </button>
+
+                <button
+                    class="filter-chip"
+                    data-filter="province"
+                >
+                    Đi tỉnh
+                </button>
+
+            </div>
+
+
+            <div class="result-info">
+
+                <span id="resultCount">
+                    26 photographer
+                </span>
+
+                <span>
+                    Nhấn vào card để xem profile
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     PHOTOGRAPHER LIST
+============================================================= -->
+
+<section class="photographer-section">
+
+    <div class="container">
+
+        <div
+            class="photographer-grid"
+            id="photographerGrid"
+        >
+            <!-- Cards are rendered from data/photographers.js -->
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     CTA
+============================================================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-inner">
+
+            <div>
+
+                <h2 class="cta-title">
+                    Chưa biết chọn ai?
+                </h2>
+
+                <p class="cta-description">
+                    Gửi ngày chụp, số người và phong cách bạn thích.
+                    Chúng tôi có thể giúp bạn tìm photographer phù hợp.
+                </p>
+
+            </div>
+
+            <a
+                href="./lien-he.html"
+                class="cta-button"
+            >
+                Nhắn để được tư vấn →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =============================================================
+     FOOTER
+============================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div class="footer-copy">
+                © NAGIH GRAPHY
+            </div>
+
+            <div class="footer-links">
+
+                <a
+                    href="./index.html"
+                    class="footer-link"
+                >
+                    Trang chủ
+                </a>
+
+                <a
+                    href="./bang-gia.html"
+                    class="footer-link"
+                >
+                    Bảng giá
+                </a>
+
+                <a
+                    href="./lien-he.html"
+                    class="footer-link"
+                >
+                    Đặt lịch
+                </a>
+
+                <a
+                    href="https://zalo.me/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Zalo
+                </a>
+
+                <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Messenger
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./data/photographers.js" defer></script>
+<script src="./data/data-source.js" defer></script>
+    <script src="./assets/js/tho.js" defer></script>
+</body>
+</html>

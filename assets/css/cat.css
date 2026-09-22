@@ -1,0 +1,652 @@
+/* Page-specific styles: cat.html */
+
+body {
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: #f7f7f5;
+            color: #171717;
+            line-height: 1.5;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: rgba(247, 247, 245, .93);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid #e4e4df;
+        }
+
+.nav-cta {
+            padding: 10px 17px;
+
+            border-radius: 999px;
+
+            background: #171717;
+            color: #fff;
+
+            font-size: 13px;
+            font-weight: 650;
+        }
+
+.breadcrumb {
+            padding: 30px 0 22px;
+
+            color: #777;
+            font-size: 12px;
+        }
+
+.breadcrumb a:hover {
+            color: #111;
+        }
+
+.breadcrumb-separator {
+            margin: 0 7px;
+            color: #aaa;
+        }
+
+.gallery {
+            display: grid;
+
+            grid-template-columns:
+                1.5fr
+                1fr
+                1fr;
+
+            grid-template-rows:
+                280px
+                280px;
+
+            gap: 10px;
+        }
+
+.gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #d7d7d3,
+                    #eeeeeb
+                );
+        }
+
+.gallery-item:first-child {
+            grid-row: span 2;
+        }
+
+.gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform .45s ease;
+        }
+
+.gallery-item:hover img {
+            transform: scale(1.025);
+        }
+
+.gallery-placeholder {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: rgba(0,0,0,.25);
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .08em;
+        }
+
+.gallery-note {
+            display: none;
+
+            margin-top: 10px;
+
+            color: #888;
+
+            font-size: 11px;
+            text-align: center;
+        }
+
+.album-link-row {
+            padding: 18px 0 45px;
+        }
+
+.album-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            font-size: 12px;
+            font-weight: 650;
+        }
+
+.album-link:hover {
+            text-decoration: underline;
+        }
+
+.profile-header {
+            display: grid;
+
+            grid-template-columns:
+                1.15fr
+                .85fr;
+
+            gap: 70px;
+
+            padding-bottom: 60px;
+
+            border-bottom: 1px solid #deded9;
+        }
+
+.profile-level {
+            margin-bottom: 10px;
+
+            color: #777;
+
+            font-size: 12px;
+            font-weight: 650;
+
+            text-transform: uppercase;
+            letter-spacing: .06em;
+        }
+
+.profile-name {
+            font-size: clamp(54px, 8vw, 90px);
+
+            line-height: .9;
+
+            letter-spacing: -.07em;
+
+            font-weight: 700;
+        }
+
+.profile-meta {
+            margin-top: 22px;
+
+            color: #555;
+
+            font-size: 14px;
+        }
+
+.profile-style {
+            margin-top: 25px;
+
+            max-width: 580px;
+
+            font-size: 23px;
+            line-height: 1.2;
+
+            letter-spacing: -.03em;
+
+            font-weight: 550;
+        }
+
+.profile-description {
+            margin-top: 15px;
+
+            max-width: 580px;
+
+            color: #777;
+
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+.tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+
+            margin-top: 22px;
+        }
+
+.tag {
+            padding: 7px 11px;
+
+            border-radius: 999px;
+
+            background: #ecece8;
+
+            color: #555;
+
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+.price-box {
+            align-self: start;
+
+            padding: 28px;
+
+            border: 1px solid #deded9;
+
+            background: #fff;
+        }
+
+.price-label {
+            color: #888;
+
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+.price {
+            margin-top: 5px;
+
+            font-size: 32px;
+
+            line-height: 1;
+
+            letter-spacing: -.045em;
+
+            font-weight: 700;
+        }
+
+.price-note {
+            margin-top: 12px;
+
+            color: #777;
+
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+.book-button {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+
+            min-height: 48px;
+
+            margin-top: 22px;
+
+            border-radius: 999px;
+
+            background: #171717;
+            color: #fff;
+
+            font-size: 13px;
+            font-weight: 650;
+        }
+
+.book-button:hover {
+            background: #333;
+        }
+
+.content-section {
+            padding: 65px 0;
+
+            border-bottom: 1px solid #deded9;
+        }
+
+.section-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 80px;
+        }
+
+.section-heading {
+            font-size: 25px;
+
+            line-height: 1.1;
+
+            letter-spacing: -.035em;
+
+            font-weight: 650;
+        }
+
+.section-description {
+            margin-top: 10px;
+
+            color: #777;
+
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+.service-list {
+            border-top: 1px solid #deded9;
+        }
+
+.service-row {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                auto;
+
+            gap: 20px;
+
+            padding: 16px 0;
+
+            border-bottom: 1px solid #deded9;
+
+            font-size: 13px;
+        }
+
+.service-name {
+            color: #555;
+        }
+
+.service-value {
+            font-weight: 650;
+            text-align: right;
+        }
+
+.schedule-box {
+            padding: 22px;
+
+            border: 1px solid #deded9;
+
+            background: #fff;
+        }
+
+.schedule-status {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+
+            font-size: 13px;
+            font-weight: 650;
+        }
+
+.status-dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #999;
+        }
+
+.schedule-text {
+            margin-top: 12px;
+
+            color: #777;
+
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+.level-description {
+            max-width: 700px;
+
+            color: #666;
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+.final-cta {
+            padding: 90px 0;
+
+            background: #171717;
+
+            color: #fff;
+        }
+
+.final-cta-inner {
+            display: flex;
+
+            align-items: flex-end;
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
+.final-title {
+            max-width: 680px;
+
+            font-size: clamp(42px, 6vw, 70px);
+
+            line-height: .96;
+
+            letter-spacing: -.06em;
+        }
+
+.final-description {
+            margin-top: 18px;
+
+            max-width: 520px;
+
+            color: #aaa;
+
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+.final-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding: 0 22px;
+
+            border-radius: 999px;
+
+            background: #fff;
+            color: #171717;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+footer {
+            background: #171717;
+
+            border-top: 1px solid #333;
+
+            color: #fff;
+        }
+
+@media (max-width: 850px) {
+
+            .profile-header {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .section-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+
+                grid-template-rows:
+                    300px
+                    180px;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 2;
+                grid-row: auto;
+            }
+        }
+
+@media (max-width: 600px) {
+
+            .container {
+                width: min(100% - 28px, 1120px);
+            }
+
+            header {
+                position: relative;
+            }
+
+            .nav {
+                height: 64px;
+            }
+
+            .nav-link {
+                display: none;
+            }
+
+            .breadcrumb {
+                padding-top: 22px;
+            }
+
+            
+
+            .gallery {
+                display: flex;
+
+                overflow-x: auto;
+
+                gap: 8px;
+
+                margin-right: -14px;
+
+                padding-right: 14px;
+
+                scrollbar-width: none;
+
+                scroll-snap-type: x mandatory;
+            }
+
+            .gallery::-webkit-scrollbar {
+                display: none;
+            }
+
+            .gallery-item {
+                flex: 0 0 82vw;
+
+                height: 105vw;
+
+                scroll-snap-align: start;
+            }
+
+            .gallery-item:first-child {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .gallery-note {
+                display: block;
+            }
+
+            .album-link-row {
+                padding-bottom: 35px;
+            }
+
+            .profile-header {
+                padding-bottom: 45px;
+            }
+
+            .profile-name {
+                font-size: 58px;
+            }
+
+            .profile-style {
+                font-size: 20px;
+            }
+
+            .price-box {
+                padding: 22px;
+            }
+
+            .content-section {
+                padding: 48px 0;
+            }
+
+            .final-cta {
+                padding: 70px 0;
+            }
+
+            .final-cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-inner {
+                padding: 25px 0;
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+        }
+
+
+/* Photographer avatar + cover visuals */
+.profile-cover-wrap { padding: 18px 0 0; }
+.profile-cover { position: relative; min-height: 260px; border-radius: 18px; overflow: hidden; background: #e9e9e5; background-size: cover; background-position: center; }
+.profile-cover.has-image .cover-placeholder { display:none; }
+.cover-placeholder { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#999; font-size:12px; letter-spacing:.08em; }
+.profile-cover::after { content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.12), transparent 45%); pointer-events:none; }
+.profile-identity { display:flex; align-items:center; gap:18px; }
+.avatar-wrap { width:72px; height:72px; flex:0 0 72px; border-radius:50%; overflow:hidden; background:#e9e9e5; }
+.profile-avatar { display:block; width:100%; height:100%; object-fit:cover; opacity:0; }
+.profile-avatar.has-image { opacity:1; }
+@media (max-width:700px){ .profile-cover{min-height:190px;border-radius:14px;} .profile-identity{gap:12px;} .avatar-wrap{width:58px;height:58px;flex-basis:58px;} }
+
+
+/* Photographer services */
+.profile-services {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #deded9;
+}
+.services-title {
+    margin: 0 0 12px;
+    font-size: 16px;
+    letter-spacing: -.02em;
+}
+.services-list {
+    border-top: 1px solid #eeeeea;
+}
+.service-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    padding: 11px 0;
+    border-bottom: 1px solid #eeeeea;
+    font-size: 11px;
+}
+.service-name { color: #444; }
+.service-value { color: #888; text-align: right; }
+@media (max-width: 600px) {
+    .service-row { grid-template-columns: 1fr; gap: 4px; }
+    .service-value { text-align: left; }
+}

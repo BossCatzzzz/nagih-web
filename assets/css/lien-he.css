@@ -1,0 +1,563 @@
+/* Page-specific styles: lien-he.html */
+
+button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+.page-header {
+            padding:
+                78px 0 55px;
+        }
+
+.page-title {
+            font-size:
+                clamp(50px, 8vw, 88px);
+
+            line-height: .92;
+
+            letter-spacing: -.07em;
+
+            font-weight: 700;
+        }
+
+.page-description {
+            margin-top: 23px;
+
+            color: #666;
+
+            font-size: 15px;
+        }
+
+.steps {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 10px;
+
+            margin-bottom: 65px;
+        }
+
+.step {
+            padding: 20px;
+
+            border:
+                1px solid #deded9;
+
+            background: #fff;
+        }
+
+.step-number {
+            color: #999;
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+.step-title {
+            margin-top: 8px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+.step-text {
+            margin-top: 7px;
+
+            color: #777;
+
+            font-size: 11px;
+            line-height: 1.55;
+        }
+
+.booking-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                380px;
+
+            gap: 55px;
+
+            align-items: start;
+        }
+
+.form-section {
+            padding-bottom: 55px;
+        }
+
+.section-heading {
+            margin-bottom: 24px;
+
+            font-size: 25px;
+
+            line-height: 1.1;
+
+            letter-spacing: -.035em;
+
+            font-weight: 650;
+        }
+
+.field {
+            margin-bottom: 25px;
+        }
+
+.field-label {
+            display: block;
+
+            margin-bottom: 9px;
+
+            font-size: 13px;
+            font-weight: 650;
+        }
+
+.field-hint {
+            margin-top: 5px;
+
+            color: #888;
+
+            font-size: 11px;
+        }
+
+input,
+        select,
+        textarea {
+            width: 100%;
+
+            border:
+                1px solid #d8d8d3;
+
+            border-radius: 9px;
+
+            background: #fff;
+
+            color: #171717;
+
+            outline: none;
+        }
+
+input,
+        select {
+            height: 48px;
+
+            padding:
+                0 14px;
+
+            font-size: 13px;
+        }
+
+textarea {
+            min-height: 105px;
+
+            padding: 13px 14px;
+
+            resize: vertical;
+
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #999;
+        }
+
+input::placeholder,
+        textarea::placeholder {
+            color: #aaa;
+        }
+
+.photographer-row {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                auto;
+
+            gap: 10px;
+        }
+
+.photographer-link {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 110px;
+
+            padding:
+                0 15px;
+
+            border:
+                1px solid #d8d8d3;
+
+            border-radius: 9px;
+
+            background: #fff;
+
+            font-size: 12px;
+            font-weight: 650;
+        }
+
+.photographer-link:hover {
+            background: #efefeb;
+        }
+
+.segmented {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 8px;
+        }
+
+.segment {
+            min-height: 48px;
+
+            border:
+                1px solid #d8d8d3;
+
+            border-radius: 9px;
+
+            background: #fff;
+
+            color: #555;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+.segment.active {
+            border-color: #171717;
+
+            background: #171717;
+
+            color: #fff;
+        }
+
+.people-control {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            overflow-x: auto;
+
+            padding-bottom: 3px;
+        }
+
+.people-button {
+            flex: 0 0 43px;
+
+            width: 43px;
+            height: 43px;
+
+            border:
+                1px solid #d8d8d3;
+
+            border-radius: 50%;
+
+            background: #fff;
+
+            color: #555;
+
+            font-size: 12px;
+            font-weight: 650;
+        }
+
+.people-button.active {
+            border-color: #171717;
+
+            background: #171717;
+
+            color: #fff;
+        }
+
+.field-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 12px;
+        }
+
+.checkbox-row {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 11px;
+
+            padding:
+                14px 15px;
+
+            border:
+                1px solid #deded9;
+
+            border-radius: 9px;
+
+            background: #fff;
+        }
+
+.checkbox-row input {
+            width: 17px;
+            height: 17px;
+
+            margin-top: 1px;
+
+            accent-color: #171717;
+        }
+
+.checkbox-content {
+            flex: 1;
+        }
+
+.checkbox-title {
+            font-size: 13px;
+            font-weight: 650;
+        }
+
+.checkbox-description {
+            margin-top: 3px;
+
+            color: #888;
+
+            font-size: 11px;
+        }
+
+.message-panel {
+            position: sticky;
+            top: 100px;
+
+            padding: 25px;
+
+            background: #171717;
+
+            color: #fff;
+        }
+
+.message-label {
+            color: #999;
+
+            font-size: 11px;
+            font-weight: 650;
+
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+
+.message-title {
+            margin-top: 7px;
+
+            font-size: 23px;
+
+            line-height: 1.05;
+
+            letter-spacing: -.035em;
+
+            font-weight: 650;
+        }
+
+.message-box {
+            margin-top: 20px;
+
+            padding: 18px;
+
+            background: #242424;
+
+            border:
+                1px solid #333;
+
+            color: #eee;
+
+            font-size: 12px;
+
+            line-height: 1.65;
+
+            white-space: pre-line;
+        }
+
+.copy-button {
+            width: 100%;
+
+            min-height: 45px;
+
+            margin-top: 10px;
+
+            border: 0;
+
+            border-radius: 999px;
+
+            background: #fff;
+
+            color: #171717;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+.copy-button:hover {
+            background: #eee;
+        }
+
+.copy-button.copied {
+            background: #cfcfcf;
+        }
+
+.contact-heading {
+            margin-top: 32px;
+
+            color: #999;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+.contact-buttons {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr
+                1fr;
+
+            gap: 7px;
+
+            margin-top: 10px;
+        }
+
+.contact-button {
+            min-height: 43px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border:
+                1px solid #444;
+
+            border-radius: 999px;
+
+            background: transparent;
+
+            color: #fff;
+
+            font-size: 11px;
+            font-weight: 650;
+        }
+
+.contact-button:hover {
+            background: #fff;
+
+            color: #171717;
+        }
+
+.contact-note {
+            margin-top: 13px;
+
+            color: #777;
+
+            font-size: 10px;
+            line-height: 1.55;
+        }
+
+footer {
+            margin-top: 30px;
+
+            background: #171717;
+
+            border-top:
+                1px solid #333;
+
+            color: #fff;
+        }
+
+@media (max-width: 900px) {
+
+            .booking-layout {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .message-panel {
+                position: static;
+            }
+
+            .steps {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+@media (max-width: 600px) {
+
+            .container {
+                width:
+                    min(
+                        100% - 28px,
+                        1120px
+                    );
+            }
+
+            .nav {
+                height: 64px;
+            }
+
+            .nav-link {
+                display: none;
+            }
+
+            .page-header {
+                padding:
+                    58px 0 40px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .field-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photographer-row {
+                grid-template-columns: 1fr;
+            }
+
+            .photographer-link {
+                min-height: 43px;
+            }
+
+            .message-panel {
+                padding: 20px;
+            }
+
+            .contact-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                padding:
+                    25px 0;
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+        }

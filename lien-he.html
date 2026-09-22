@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Đặt lịch chụp — NAGIH GRAPHY</title>
+
+    <meta
+        name="description"
+        content="Đặt lịch chụp cùng NAGIH GRAPHY."
+    >
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/lien-he.css">
+</head>
+
+
+<body>
+
+
+<!-- =============================================================
+     HEADER
+============================================================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a
+            href="./index.html"
+            class="brand"
+        >
+            NAGIH GRAPHY
+        </a>
+
+
+        <nav class="nav-right">
+
+            <a
+                href="./tho.html"
+                class="nav-link"
+            >
+                Chọn thợ
+            </a>
+
+
+            <a
+                href="./bang-gia.html"
+                class="nav-link"
+            >
+                Bảng giá
+            </a>
+
+
+            <a
+                href="./lien-he.html"
+                class="nav-cta"
+            >
+                Đặt lịch
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =============================================================
+     PAGE HEADER
+============================================================= -->
+
+<section class="page-header">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            NAGIH GRAPHY
+        </div>
+
+
+        <h1 class="page-title">
+            Đặt lịch chụp
+        </h1>
+
+
+        <p class="page-description">
+            Giữ lịch với thợ trong 4 bước.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     4 STEPS
+============================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-title">
+                    Chọn thợ
+                </div>
+
+                <div class="step-text">
+                    Xem portfolio và chọn photographer
+                    bạn thích.
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-title">
+                    Nhắn thợ
+                </div>
+
+                <div class="step-text">
+                    Gửi ngày chụp và số người qua
+                    Zalo hoặc Messenger.
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-title">
+                    Cọc giữ lịch
+                </div>
+
+                <div class="step-text">
+                    Thợ xác nhận lịch trống và gửi
+                    thông tin cọc.
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <div class="step-title">
+                    Chụp và nhận ảnh
+                </div>
+
+                <div class="step-text">
+                    Trao đổi trước buổi chụp để thống nhất
+                    moodboard và thời gian.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     BOOKING
+============================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="booking-layout">
+
+
+            <!-- =================================================
+                 LEFT FORM
+            ================================================== -->
+
+            <div>
+
+
+                <!-- PHOTOGRAPHER -->
+
+                <section class="form-section">
+
+                    <h2 class="section-heading">
+                        Thông tin buổi chụp
+                    </h2>
+
+
+                    <div class="field">
+
+                        <label
+                            class="field-label"
+                            for="photographer"
+                        >
+                            Thợ muốn chụp
+                        </label>
+
+
+                        <div class="photographer-row">
+
+                            <select id="photographer">
+
+                                <option value="">
+                                    Nhờ studio gợi ý
+                                </option>
+
+                                <option value="Cat">
+                                    Cat
+                                </option>
+
+                                <option value="Bear">
+                                    Bear
+                                </option>
+
+                                <option value="Thợ khác">
+                                    Thợ khác
+                                </option>
+
+                            </select>
+
+
+                            <a
+                                href="./tho.html"
+                                class="photographer-link"
+                            >
+                                Xem portfolio
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DURATION -->
+
+                    <div class="field">
+
+                        <label class="field-label">
+                            Chụp cả ngày hay nửa ngày
+                        </label>
+
+
+                        <div class="segmented">
+
+                            <button
+                                type="button"
+                                class="segment active"
+                                data-duration="Cả ngày"
+                            >
+                                Cả ngày
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="segment"
+                                data-duration="Nửa ngày"
+                            >
+                                Nửa ngày
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PEOPLE -->
+
+                    <div class="field">
+
+                        <label class="field-label">
+                            Số người chụp
+                        </label>
+
+
+                        <div
+                            class="people-control"
+                            id="peopleControl"
+                        >
+
+                            <button
+                                type="button"
+                                class="people-button active"
+                                data-people="1"
+                            >
+                                1
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="people-button"
+                                data-people="2"
+                            >
+                                2
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="people-button"
+                                data-people="3"
+                            >
+                                3
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="people-button"
+                                data-people="4"
+                            >
+                                4
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="people-button"
+                                data-people="5"
+                            >
+                                5
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="people-button"
+                                data-people="6"
+                            >
+                                6
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="people-button"
+                                data-people="7"
+                            >
+                                7
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="people-button"
+                                data-people="8"
+                            >
+                                8
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="people-button"
+                                data-people="9"
+                            >
+                                9
+                            </button>
+
+                        </div>
+
+
+                        <div class="field-hint">
+                            Mặc định 1 người, giá gói lẻ.
+                            Kéo sang phải nếu chụp nhóm,
+                            tối đa 9 người.
+                        </div>
+
+                    </div>
+
+
+                    <!-- DATE + PROVINCE -->
+
+                    <div class="field-grid">
+
+                        <div class="field">
+
+                            <label
+                                class="field-label"
+                                for="shootDate"
+                            >
+                                Ngày chụp dự kiến
+                            </label>
+
+
+                            <input
+                                type="date"
+                                id="shootDate"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label
+                                class="field-label"
+                                for="province"
+                            >
+                                Tỉnh / thành chụp
+                            </label>
+
+
+                            <select id="province">
+
+                                <option value="">
+                                    Chọn tỉnh / thành
+                                </option>
+
+                                <option>
+                                    Hà Nội
+                                </option>
+
+                                <option>
+                                    TP. Hồ Chí Minh
+                                </option>
+
+                                <option>
+                                    Đà Nẵng
+                                </option>
+
+                                <option>
+                                    Hải Phòng
+                                </option>
+
+                                <option>
+                                    Quảng Ninh
+                                </option>
+
+                                <option>
+                                    Bắc Ninh
+                                </option>
+
+                                <option>
+                                    Bắc Giang
+                                </option>
+
+                                <option>
+                                    Vĩnh Phúc
+                                </option>
+
+                                <option>
+                                    Hải Dương
+                                </option>
+
+                                <option>
+                                    Thái Nguyên
+                                </option>
+
+                                <option>
+                                    Ninh Bình
+                                </option>
+
+                                <option>
+                                    Thanh Hóa
+                                </option>
+
+                                <option>
+                                    Nghệ An
+                                </option>
+
+                                <option>
+                                    Hà Tĩnh
+                                </option>
+
+                                <option>
+                                    Khác
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="field">
+
+                        <label
+                            class="field-label"
+                            for="specificLocation"
+                        >
+                            Địa điểm cụ thể
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="specificLocation"
+                            placeholder="VD: ĐH Thương Mại, Cầu Giấy"
+                        >
+
+                    </div>
+
+
+                    <!-- EVENING -->
+
+                    <div class="field">
+
+                        <label class="checkbox-row">
+
+                            <input
+                                type="checkbox"
+                                id="evening"
+                            >
+
+
+                            <span class="checkbox-content">
+
+                                <span class="checkbox-title">
+                                    Chụp thêm buổi tối đến 20h
+                                    (+500.000đ)
+                                </span>
+
+
+                                <span class="checkbox-description">
+                                    Yêu cầu chụp kéo dài đến buổi tối.
+                                </span>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- CONCEPT -->
+
+                    <div class="field">
+
+                        <label
+                            class="field-label"
+                            for="concept"
+                        >
+                            Concept mong muốn
+                        </label>
+
+
+                        <textarea
+                            id="concept"
+                            placeholder="VD: tự nhiên, năng động, vintage, muốn có ảnh nhóm..."
+                        ></textarea>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     CONTACT INFORMATION
+                ================================================== -->
+
+                <section class="form-section">
+
+                    <h2 class="section-heading">
+                        Thông tin của bạn
+                    </h2>
+
+
+                    <div class="field">
+
+                        <label
+                            class="field-label"
+                            for="customerName"
+                        >
+                            Tên bạn
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Tên của bạn"
+                        >
+
+
+                        <div class="field-hint">
+                            Không bắt buộc, để thợ biết đang nói
+                            chuyện với ai.
+                        </div>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label
+                            class="field-label"
+                            for="phone"
+                        >
+                            Số điện thoại
+                        </label>
+
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Số điện thoại"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label
+                            class="field-label"
+                            for="website"
+                        >
+                            Website
+                        </label>
+
+
+                        <input
+                            type="url"
+                            id="website"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 MESSAGE
+            ================================================== -->
+
+            <aside class="message-panel">
+
+
+                <div class="message-label">
+                    Tin nhắn gửi NAGIH GRAPHY
+                </div>
+
+
+                <h2 class="message-title">
+                    Tin nhắn của bạn
+                    được tạo tự động.
+                </h2>
+
+
+                <div
+                    class="message-box"
+                    id="messageBox"
+                ></div>
+
+
+                <button
+                    type="button"
+                    class="copy-button"
+                    id="copyButton"
+                >
+                    Sao chép
+                </button>
+
+
+                <div class="contact-heading">
+                    Nhắn trực tiếp
+                </div>
+
+
+                <div class="contact-buttons">
+
+
+                    <a
+                        href="https://zalo.me/"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-button"
+                        id="zaloButton"
+                    >
+                        Zalo
+                    </a>
+
+
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-button"
+                        id="messengerButton"
+                    >
+                        Messenger
+                    </a>
+
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-button"
+                    >
+                        Instagram
+                    </a>
+
+
+                </div>
+
+
+                <p class="contact-note">
+                    Tin nhắn được tự chép vào clipboard.
+                    Sau đó bạn chỉ cần dán vào khung chat.
+                </p>
+
+            </aside>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =============================================================
+     FOOTER
+============================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+
+            <div class="footer-copy">
+                © NAGIH GRAPHY
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <a
+                    href="./tho.html"
+                    class="footer-link"
+                >
+                    Chọn thợ
+                </a>
+
+
+                <a
+                    href="./bang-gia.html"
+                    class="footer-link"
+                >
+                    Bảng giá
+                </a>
+
+
+                <a
+                    href="./lien-he.html"
+                    class="footer-link"
+                >
+                    Đặt lịch
+                </a>
+
+
+                <a
+                    href="https://zalo.me/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Zalo
+                </a>
+
+
+                <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Messenger
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Instagram
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =============================================================
+     JAVASCRIPT
+============================================================= -->
+
+
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./data/photographers.js" defer></script>
+<script src="./data/data-source.js" defer></script>
+    <script src="./assets/js/lien-he.js" defer></script>
+</body>
+
+</html>

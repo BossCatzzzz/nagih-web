@@ -1,0 +1,632 @@
+/* Page-specific styles: bang-gia.html */
+
+.page-header {
+            padding:
+                82px 0 55px;
+        }
+
+.page-title {
+            max-width: 850px;
+
+            font-size:
+                clamp(48px, 8vw, 88px);
+
+            line-height: .92;
+
+            letter-spacing: -.07em;
+
+            font-weight: 700;
+        }
+
+.page-description {
+            max-width: 650px;
+
+            margin-top: 25px;
+
+            color: #666;
+
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+.price-section {
+            padding-bottom: 80px;
+        }
+
+.price-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 12px;
+        }
+
+.price-card {
+            display: flex;
+            flex-direction: column;
+
+            min-height: 300px;
+
+            padding: 24px;
+
+            background: #fff;
+
+            border:
+                1px solid #deded9;
+
+            transition:
+                transform .22s ease,
+                box-shadow .22s ease,
+                border-color .22s ease;
+        }
+
+.price-card:hover {
+            transform: translateY(-4px);
+
+            border-color: #ccc;
+
+            box-shadow:
+                0 16px 40px
+                rgba(0, 0, 0, .06);
+        }
+
+.price-level {
+            color: #777;
+
+            font-size: 11px;
+            font-weight: 650;
+
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+.price-card-title {
+            margin-top: 10px;
+
+            font-size: 25px;
+
+            line-height: 1;
+
+            letter-spacing: -.04em;
+
+            font-weight: 700;
+        }
+
+.price-number {
+            margin-top: 24px;
+
+            font-size: 27px;
+
+            line-height: 1;
+
+            letter-spacing: -.045em;
+
+            font-weight: 700;
+        }
+
+.price-card-description {
+            margin-top: 18px;
+
+            color: #777;
+
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+.price-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-top: auto;
+            padding-top: 22px;
+        }
+
+.people-count {
+            color: #888;
+
+            font-size: 11px;
+        }
+
+.people-count strong {
+            color: #222;
+
+            font-weight: 700;
+        }
+
+.price-link {
+            font-size: 11px;
+            font-weight: 650;
+        }
+
+.price-link:hover {
+            text-decoration: underline;
+        }
+
+.group-notice {
+            margin-top: 12px;
+
+            padding: 20px 22px;
+
+            border:
+                1px solid #deded9;
+
+            background: #efefeb;
+
+            color: #666;
+
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+.travel-section {
+            padding:
+                80px 0;
+
+            border-top:
+                1px solid #deded9;
+
+            border-bottom:
+                1px solid #deded9;
+        }
+
+.section-header {
+            display: grid;
+
+            grid-template-columns:
+                .9fr
+                1.1fr;
+
+            gap: 70px;
+
+            margin-bottom: 40px;
+        }
+
+.section-eyebrow {
+            margin-bottom: 12px;
+
+            color: #777;
+
+            font-size: 11px;
+            font-weight: 650;
+
+            letter-spacing: .07em;
+            text-transform: uppercase;
+        }
+
+.section-title {
+            font-size:
+                clamp(35px, 5vw, 58px);
+
+            line-height: .98;
+
+            letter-spacing: -.055em;
+
+            font-weight: 700;
+        }
+
+.section-description {
+            max-width: 550px;
+
+            color: #666;
+
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+.travel-calculator {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 12px;
+
+            margin-bottom: 35px;
+        }
+
+.control-box {
+            padding: 22px;
+
+            background: #fff;
+
+            border:
+                1px solid #deded9;
+        }
+
+.control-label {
+            display: block;
+
+            margin-bottom: 9px;
+
+            color: #777;
+
+            font-size: 11px;
+            font-weight: 650;
+
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+select {
+            width: 100%;
+            height: 48px;
+
+            padding:
+                0 13px;
+
+            border:
+                1px solid #d6d6d1;
+
+            border-radius: 9px;
+
+            background: #fff;
+
+            color: #171717;
+
+            outline: none;
+
+            font-size: 13px;
+        }
+
+select:focus {
+            border-color: #999;
+        }
+
+.travel-result {
+            display: grid;
+
+            grid-template-columns:
+                1fr auto;
+
+            gap: 25px;
+
+            align-items: center;
+
+            padding: 26px 28px;
+
+            background: #171717;
+
+            color: #fff;
+        }
+
+.travel-result-label {
+            color: #aaa;
+
+            font-size: 11px;
+        }
+
+.travel-result-place {
+            margin-top: 3px;
+
+            font-size: 17px;
+            font-weight: 650;
+        }
+
+.travel-result-note {
+            margin-top: 5px;
+
+            color: #888;
+
+            font-size: 11px;
+        }
+
+.travel-result-price {
+            font-size: 27px;
+
+            line-height: 1;
+
+            letter-spacing: -.04em;
+
+            font-weight: 700;
+
+            text-align: right;
+
+            white-space: nowrap;
+        }
+
+.table-wrapper {
+            overflow-x: auto;
+
+            background: #fff;
+
+            border:
+                1px solid #deded9;
+        }
+
+.travel-table {
+            width: 100%;
+
+            border-collapse: collapse;
+
+            min-width: 700px;
+        }
+
+.travel-table th {
+            padding:
+                14px 18px;
+
+            background: #efefeb;
+
+            color: #666;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            text-align: left;
+
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+.travel-table td {
+            padding:
+                15px 18px;
+
+            border-top:
+                1px solid #ecece8;
+
+            color: #555;
+
+            font-size: 12px;
+        }
+
+.travel-table td:nth-child(2) {
+            color: #171717;
+
+            font-weight: 650;
+
+            white-space: nowrap;
+        }
+
+.travel-table tr:hover td {
+            background: #fafaf8;
+        }
+
+.notes {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 10px;
+
+            margin-top: 12px;
+        }
+
+.note {
+            padding: 18px;
+
+            border:
+                1px solid #deded9;
+
+            color: #666;
+
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+.note strong {
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #222;
+
+            font-size: 12px;
+        }
+
+.evening {
+            padding:
+                70px 0;
+
+            border-bottom:
+                1px solid #deded9;
+        }
+
+.evening-box {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+
+            padding:
+                28px;
+
+            background: #fff;
+
+            border:
+                1px solid #deded9;
+        }
+
+.evening-title {
+            font-size: 19px;
+            font-weight: 650;
+
+            letter-spacing: -.025em;
+        }
+
+.evening-text {
+            margin-top: 6px;
+
+            color: #777;
+
+            font-size: 12px;
+        }
+
+.evening-price {
+            font-size: 23px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+.cta {
+            padding:
+                90px 0;
+
+            background: #171717;
+
+            color: #fff;
+        }
+
+.cta-inner {
+            display: flex;
+
+            align-items: flex-end;
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
+.cta-title {
+            max-width: 680px;
+
+            font-size:
+                clamp(42px, 6vw, 68px);
+
+            line-height: .95;
+
+            letter-spacing: -.06em;
+        }
+
+.cta-text {
+            max-width: 530px;
+
+            margin-top: 18px;
+
+            color: #aaa;
+
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+.cta-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding:
+                0 22px;
+
+            border-radius: 999px;
+
+            background: #fff;
+
+            color: #171717;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            white-space: nowrap;
+        }
+
+footer {
+            background: #171717;
+
+            border-top:
+                1px solid #333;
+
+            color: #fff;
+        }
+
+@media (max-width: 900px) {
+
+            .price-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .section-header {
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
+        }
+
+@media (max-width: 650px) {
+
+            .container {
+                width:
+                    min(
+                        100% - 28px,
+                        1120px
+                    );
+            }
+
+            .nav {
+                height: 64px;
+            }
+
+            .nav-link {
+                display: none;
+            }
+
+            .page-header {
+                padding:
+                    60px 0 40px;
+            }
+
+            .price-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-card {
+                min-height: 250px;
+            }
+
+            .travel-calculator {
+                grid-template-columns: 1fr;
+            }
+
+            .travel-result {
+                grid-template-columns: 1fr;
+            }
+
+            .travel-result-price {
+                text-align: left;
+            }
+
+            .notes {
+                grid-template-columns: 1fr;
+            }
+
+            .evening-box {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+            .cta-inner {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+            .footer-inner {
+                padding:
+                    25px 0;
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+        }
+
+/* Photographer data summary inside each price tier */
+.people-names {
+    margin-top: 5px;
+    max-width: 260px;
+    color: #888;
+    font-size: 10px;
+    line-height: 1.45;
+}

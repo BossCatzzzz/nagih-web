@@ -1,0 +1,14 @@
+slug,name,level,rating,shoots,city,price,featured,active,profile,placeholder,categories,style,description,tags,avatar,cover,gallery,albumUrl,zalo,facebook,instagram,services
+bear,Bear,Ekip 1,5.0,132,Hà Nội,2500000,TRUE,TRUE,TRUE,FALSE,ekip1|group|province,,,,avatar.jpg,cover.jpg,,,,,,
+tiger,Tiger,Ekip 1,4.9,182,Hà Nội,2500000,TRUE,TRUE,TRUE,FALSE,ekip1|group|province,,,,avatar.jpg,cover.jpg,,,,,,
+whale,Whale,Ekip 1,5.0,111,Hà Nội,2500000,TRUE,TRUE,TRUE,FALSE,ekip1|group,,,,avatar.jpg,cover.jpg,,,,,,
+shark,Shark,Ekip 1,5.0,169,Hà Nội,2500000,TRUE,TRUE,TRUE,FALSE,ekip1|province,,,,avatar.jpg,cover.jpg,,,,,,
+fox,Fox,Founder,5.0,95,Hà Nội,3000000,FALSE,TRUE,TRUE,FALSE,founder|group|province,,,,avatar.jpg,cover.jpg,,,,,,
+panda,Panda,"Ekip 2, 3",4.9,74,Hà Nội,1980000,FALSE,TRUE,TRUE,FALSE,ekip23|group,,,,avatar.jpg,cover.jpg,,,,,,
+wolf,Wolf,"Ekip 2, 3",4.9,68,Hà Nội,1980000,FALSE,TRUE,TRUE,FALSE,ekip23|province,,,,avatar.jpg,cover.jpg,,,,,,
+cat,Cat,"Ekip 2, 3",5.0,323,Hà Nội,2200000,FALSE,TRUE,TRUE,FALSE,ekip23|group|province,"Ekip 2, 3: Những photographer trẻ của NAGIH, đa dạng phong cách, bắt trend nhanh và được vận hành theo cùng tiêu chuẩn của ekip.","Cat phù hợp với các nhu cầu chụp kỷ yếu, chụp nhóm, chụp cá nhân và các booking cần đi tỉnh.",Kỷ yếu Đại học|Kỷ yếu THPT|Chụp nhóm|Chụp cá nhân|Nhận đi tỉnh,avatar.jpg,cover.jpg,gallery-01.jpg|gallery-02.jpg|gallery-03.jpg|gallery-04.jpg,,,,,[object Object]|[object Object]|[object Object]|[object Object]|[object Object]
+mouse,Mouse,Take Care,4.8,47,Hà Nội,1980000,FALSE,TRUE,TRUE,FALSE,takecare|province,,,,avatar.jpg,cover.jpg,,,,,,
+demo-01,Photographer,Ekip 1,4.9,,Hà Nội,2500000,FALSE,TRUE,TRUE,TRUE,ekip1,,,,avatar.jpg,cover.jpg,,,,,,
+demo-02,Photographer,"Ekip 2, 3",4.9,,Hà Nội,1980000,FALSE,TRUE,TRUE,TRUE,ekip23,,,,avatar.jpg,cover.jpg,,,,,,
+demo-03,Photographer,Founder,5.0,,Hà Nội,3000000,FALSE,TRUE,TRUE,TRUE,founder,,,,avatar.jpg,cover.jpg,,,,,,
+demo-04,Photographer,Take Care,4.8,,Hà Nội,1980000,FALSE,TRUE,TRUE,TRUE,takecare|group|province,,,,avatar.jpg,cover.jpg,,,,,,

@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NAGIH GRAPHY — Chọn thợ chụp kỷ yếu</title>
+    <meta
+        name="description"
+        content="Chọn photographer theo phong cách, xem portfolio, giá và đặt lịch chụp kỷ yếu."
+    >
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+
+<!-- =============================================================
+     HEADER
+============================================================= -->
+
+<header>
+    <div class="container nav">
+
+        <a href="./index.html" class="brand">
+            NAGIH GRAPHY
+        </a>
+
+        <nav class="nav-right">
+            <a href="./tho.html" class="nav-link">
+                Chọn thợ chụp
+            </a>
+
+            <a href="./lien-he.html" class="nav-cta">
+                Đặt lịch
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- =============================================================
+     HERO
+============================================================= -->
+
+<section class="hero">
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div>
+
+                <div class="eyebrow">
+                    Chọn thợ chụp
+                </div>
+
+                <h1 class="hero-title">
+                    Chọn thợ cá nhân
+                    <span>theo vibe.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Không cần book một ekip rồi mới biết ai sẽ chụp mình.
+                    Tại NAGIH, bạn có thể xem portfolio, phong cách và lịch
+                    của từng photographer trước khi lựa chọn.
+                    Mỗi người một màu ảnh, mỗi người một thế mạnh.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="./tho.html"
+                        class="button button-primary"
+                    >
+                        Xem 26 thợ
+                    </a>
+
+                    <a
+                        href="./bang-gia.html"
+                        class="button button-secondary"
+                    >
+                        Bảng giá và phụ phí tỉnh
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-note">
+
+                Tìm photographer phù hợp với phong cách
+                của bạn, xem portfolio trước rồi nhắn trực tiếp
+                để giữ lịch.
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =============================================================
+     STATS
+============================================================= -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <div class="stat-number" id="stat-photographers">
+                    0
+                </div>
+
+                <div class="stat-label">
+                    thợ đang nhận lịch
+                </div>
+            </div>
+
+
+            <div class="stat">
+                <div class="stat-number" id="stat-shoots">
+                    0
+                </div>
+
+                <div class="stat-label">
+                    buổi đã chụp
+                </div>
+            </div>
+
+
+            <div class="stat">
+                <div class="stat-number" id="stat-price">
+                    0đ
+                </div>
+
+                <div class="stat-label">
+                    giá khởi điểm
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     FEATURED PHOTOGRAPHERS
+============================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="eyebrow">
+                    Photographer
+                </div>
+
+                <h2 class="section-title">
+                    Thợ nổi bật
+                </h2>
+
+            </div>
+
+            <a
+                href="./tho.html"
+                class="text-link"
+            >
+                Xem tất cả →
+            </a>
+
+        </div>
+
+
+        <div class="photographer-grid" id="featuredPhotographers"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     TRAVEL / PROVINCES
+============================================================= -->
+
+<section class="section travel-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="eyebrow">
+                    Đi tỉnh
+                </div>
+
+                <h2 class="section-title">
+                    Phụ phí di chuyển<br>
+                    đi các tỉnh
+                </h2>
+
+            </div>
+
+            <div class="section-description">
+                Book theo nhóm để chia phụ phí di chuyển cho nhẹ.
+            </div>
+
+        </div>
+
+
+        <div class="province-list">
+
+            <span class="province">
+                Hà Nội
+            </span>
+
+            <span class="province">
+                Vĩnh Phúc
+            </span>
+
+            <span class="province">
+                Bắc Ninh
+            </span>
+
+            <span class="province">
+                Lạng Sơn
+            </span>
+
+            <span class="province">
+                Hải Dương
+            </span>
+
+            <span class="province">
+                Thái Nguyên
+            </span>
+
+            <span class="province">
+                Hải Phòng
+            </span>
+
+            <span class="province">
+                Hạ Long
+            </span>
+
+            <span class="province">
+                Quảng Ninh
+            </span>
+
+            <span class="province">
+                Phú Thọ
+            </span>
+
+            <span class="province">
+                Sơn La
+            </span>
+
+            <span class="province">
+                Lào Cai
+            </span>
+
+            <span class="province">
+                Tuyên Quang
+            </span>
+
+            <span class="province">
+                Bắc Kạn
+            </span>
+
+            <span class="province">
+                Thanh Hoá
+            </span>
+
+            <span class="province">
+                Ninh Bình
+            </span>
+
+            <span class="province">
+                Nghệ An
+            </span>
+
+            <span class="province">
+                Hà Tĩnh
+            </span>
+
+            <span class="province">
+                Lai Châu
+            </span>
+
+            <span class="province">
+                Bắc Giang
+            </span>
+
+            <span class="province">
+                Hà Nam
+            </span>
+
+        </div>
+
+
+        <p class="travel-note">
+            Phụ phí là mức tham khảo cho 1 photographer.
+            Chi phí thực tế sẽ được xác nhận theo địa điểm cụ thể.
+        </p>
+
+
+        <div style="margin-top:24px">
+
+            <a
+                href="./bang-gia.html"
+                class="text-link"
+            >
+                Xem bảng phụ phí →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     WORKFLOW
+============================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="eyebrow">
+                    Booking
+                </div>
+
+                <h2 class="section-title">
+                    Giữ lịch trong<br>
+                    4 bước
+                </h2>
+
+            </div>
+
+            <div class="section-description">
+                Giữ lịch với photographer bằng cách nhắn trực tiếp
+                qua Zalo hoặc Messenger.
+            </div>
+
+        </div>
+
+
+        <div class="workflow-grid">
+
+
+            <div class="workflow-item">
+
+                <div class="workflow-number">
+                    01
+                </div>
+
+                <div class="workflow-title">
+                    Chọn thợ
+                </div>
+
+                <div class="workflow-text">
+                    Xem portfolio và chọn photographer
+                    có phong cách bạn thích.
+                </div>
+
+            </div>
+
+
+            <div class="workflow-item">
+
+                <div class="workflow-number">
+                    02
+                </div>
+
+                <div class="workflow-title">
+                    Nhắn thợ
+                </div>
+
+                <div class="workflow-text">
+                    Gửi ngày chụp và số người.
+                    Website có thể soạn sẵn tin nhắn cho bạn.
+                </div>
+
+            </div>
+
+
+            <div class="workflow-item">
+
+                <div class="workflow-number">
+                    03
+                </div>
+
+                <div class="workflow-title">
+                    Cọc giữ lịch
+                </div>
+
+                <div class="workflow-text">
+                    Photographer xác nhận lịch trống
+                    và gửi thông tin cọc.
+                </div>
+
+            </div>
+
+
+            <div class="workflow-item">
+
+                <div class="workflow-number">
+                    04
+                </div>
+
+                <div class="workflow-title">
+                    Chụp và nhận ảnh
+                </div>
+
+                <div class="workflow-text">
+                    Trao đổi trước buổi chụp để thống nhất
+                    moodboard và thời gian.
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     FINAL CTA
+============================================================= -->
+
+<section class="final-cta">
+
+    <div class="container">
+
+        <div class="final-cta-inner">
+
+            <div>
+
+                <h2 class="final-title">
+                    Chốt thợ,
+                    chốt ngày,
+                    xong.
+                </h2>
+
+                <p class="final-description">
+                    Chọn thợ hợp gu, nhắn ngày bạn muốn và số người.
+                    Photographer sẽ báo giá chính xác và hỗ trợ giữ lịch.
+                </p>
+
+            </div>
+
+
+            <div class="final-actions">
+
+                <a
+                    href="./lien-he.html"
+                    class="button button-light"
+                >
+                    Nhắn studio ngay
+                </a>
+
+                <a
+                    href="./tho.html"
+                    class="button button-dark-outline"
+                >
+                    Xem thợ trước đã
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =============================================================
+     FOOTER
+============================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div class="footer-copy">
+                © NAGIH GRAPHY
+            </div>
+
+            <div class="footer-links">
+
+                <a
+                    href="./tho.html"
+                    class="footer-link"
+                >
+                    Chọn thợ
+                </a>
+
+                <a
+                    href="./bang-gia.html"
+                    class="footer-link"
+                >
+                    Bảng giá
+                </a>
+
+                <!--
+                    THAY LINK BẰNG ZALO CỦA ANH
+                -->
+                <a
+                    href="https://zalo.me/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Zalo
+                </a>
+
+                <!--
+                    THAY LINK BẰNG FACEBOOK/MESSENGER CỦA ANH
+                -->
+                <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Messenger
+                </a>
+
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="./assets/js/main.js" defer></script>
+<script src="./data/photographers.js" defer></script>
+<script src="./data/data-source.js" defer></script>
+<script src="./assets/js/index.js" defer></script>
+</body>
+</html>

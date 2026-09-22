@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bảng giá — NAGIH GRAPHY</title>
+
+    <meta
+        name="description"
+        content="Bảng giá chụp ảnh và phụ phí đi tỉnh của NAGIH GRAPHY."
+    >
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bang-gia.css">
+</head>
+
+
+<body>
+
+
+<!-- =============================================================
+     HEADER
+============================================================= -->
+
+<header>
+
+    <div class="container nav">
+
+        <a
+            href="./index.html"
+            class="brand"
+        >
+            NAGIH GRAPHY
+        </a>
+
+
+        <nav class="nav-right">
+
+            <a
+                href="./tho.html"
+                class="nav-link"
+            >
+                Chọn thợ
+            </a>
+
+
+            <a
+                href="./lien-he.html"
+                class="nav-cta"
+            >
+                Đặt lịch
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =============================================================
+     PAGE HEADER
+============================================================= -->
+
+<section class="page-header">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            NAGIH GRAPHY
+        </div>
+
+
+        <h1 class="page-title">
+            Bảng giá
+            <span>theo hạng ekip.</span>
+        </h1>
+
+
+        <p class="page-description">
+            Giá khởi điểm cho một buổi chụp cá nhân.
+            Giá cuối phụ thuộc vào gói, số người,
+            địa điểm và photographer bạn chọn.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     MAIN PRICE
+============================================================= -->
+
+<section class="price-section">
+
+    <div class="container">
+
+        <div class="price-grid" id="priceGrid"></div>
+
+
+        <div class="group-notice">
+
+            Chưa có bảng giá gói nhóm trên hệ thống.
+            Nhắn studio để được báo giá theo số người.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     TRAVEL SURCHARGE
+============================================================= -->
+
+<section class="travel-section">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-eyebrow">
+                    Di chuyển
+                </div>
+
+                <h2 class="section-title">
+                    Phụ phí<br>
+                    đi tỉnh.
+                </h2>
+
+            </div>
+
+
+            <p class="section-description">
+                Các mức dưới đây là phụ phí tham khảo
+                cho 1 thợ, không phải mức cố định.
+                Thợ sẽ báo chính xác theo địa điểm
+                cụ thể khi bạn nhắn.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             CALCULATOR
+        ====================================================== -->
+
+        <div class="travel-calculator">
+
+
+            <div class="control-box">
+
+                <label
+                    class="control-label"
+                    for="locationSelect"
+                >
+                    Nơi chụp
+                </label>
+
+
+                <select id="locationSelect">
+
+                    <option value="">
+                        Chọn nơi chụp
+                    </option>
+
+                    <option value="100000">
+                        Hà Nội — 2 địa điểm nội thành
+                    </option>
+
+                    <option value="200000">
+                        Hà Nội — ngoại thành
+                    </option>
+
+                    <option value="300000">
+                        Vĩnh Phúc
+                    </option>
+
+                    <option value="300000">
+                        Bắc Ninh
+                    </option>
+
+                    <option value="800000">
+                        Lạng Sơn
+                    </option>
+
+                    <option value="400000">
+                        Hải Dương
+                    </option>
+
+                    <option value="500000">
+                        Thái Nguyên
+                    </option>
+
+                    <option value="600000">
+                        Hải Phòng
+                    </option>
+
+                    <option value="700000">
+                        Hạ Long
+                    </option>
+
+                    <option value="600000">
+                        Quảng Ninh
+                    </option>
+
+                    <option value="600000">
+                        Phú Thọ
+                    </option>
+
+                    <option value="800000">
+                        Sơn La
+                    </option>
+
+                    <option value="900000">
+                        Lào Cai
+                    </option>
+
+                    <option value="800000">
+                        Tuyên Quang
+                    </option>
+
+                    <option value="800000">
+                        Bắc Kạn
+                    </option>
+
+                    <option value="800000">
+                        Thanh Hoá
+                    </option>
+
+                    <option value="550000">
+                        Ninh Bình
+                    </option>
+
+                    <option value="950000">
+                        Nghệ An
+                    </option>
+
+                    <option value="1050000">
+                        Hà Tĩnh
+                    </option>
+
+                    <option value="1000000">
+                        Lai Châu
+                    </option>
+
+                    <option value="500000">
+                        Bắc Giang
+                    </option>
+
+                    <option value="500000">
+                        Hà Nam
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="control-box">
+
+                <label
+                    class="control-label"
+                    for="photographerCount"
+                >
+                    Số thợ
+                </label>
+
+
+                <select id="photographerCount">
+
+                    <option value="1">
+                        1 thợ
+                    </option>
+
+                    <option value="2">
+                        2 thợ
+                    </option>
+
+                    <option value="3">
+                        3 thợ
+                    </option>
+
+                    <option value="4">
+                        4 thợ
+                    </option>
+
+                    <option value="5">
+                        5 thợ
+                    </option>
+
+                    <option value="6">
+                        6 thợ
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             RESULT
+        ====================================================== -->
+
+        <div class="travel-result">
+
+            <div>
+
+                <div class="travel-result-label">
+                    Phụ phí tham khảo
+                </div>
+
+                <div
+                    class="travel-result-place"
+                    id="resultPlace"
+                >
+                    Chọn địa điểm
+                </div>
+
+                <div
+                    class="travel-result-note"
+                    id="resultNote"
+                >
+                    Chưa chọn địa điểm
+                </div>
+
+            </div>
+
+
+            <div
+                class="travel-result-price"
+                id="resultPrice"
+            >
+                —
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             TABLE
+        ====================================================== -->
+
+        <div
+            class="table-wrapper"
+            style="margin-top: 35px;"
+        >
+
+            <table class="travel-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Nơi chụp
+                        </th>
+
+                        <th>
+                            Phụ phí / thợ
+                        </th>
+
+                        <th>
+                            Ghi chú
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            Hà Nội — 2 địa điểm nội thành
+                        </td>
+
+                        <td>
+                            100.000đ
+                        </td>
+
+                        <td>
+                            Áp dụng khi 2 điểm chụp cách nhau trên 5km.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Hà Nội — ngoại thành
+                        </td>
+
+                        <td>
+                            200.000đ
+                        </td>
+
+                        <td>
+                            Chỉ chụp tại trường.
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>Vĩnh Phúc</td>
+                        <td>300.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Bắc Ninh</td>
+                        <td>300.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Lạng Sơn</td>
+                        <td>800.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Hải Dương</td>
+                        <td>400.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Thái Nguyên</td>
+                        <td>500.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Hải Phòng</td>
+                        <td>600.000đ</td>
+                        <td>
+                            Huyện xa trung tâm có thể chênh thêm.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Hạ Long</td>
+                        <td>700.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Quảng Ninh</td>
+                        <td>600.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Phú Thọ</td>
+                        <td>600.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Sơn La</td>
+                        <td>800.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Lào Cai</td>
+                        <td>900.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Tuyên Quang</td>
+                        <td>800.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Bắc Kạn</td>
+                        <td>800.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Thanh Hoá</td>
+                        <td>800.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Ninh Bình</td>
+                        <td>500.000đ – 600.000đ</td>
+                        <td>
+                            Xa trung tâm thành phố: 600.000đ.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Nghệ An</td>
+                        <td>900.000đ – 1.000.000đ</td>
+                        <td>
+                            Huyện xa trung tâm có thể cao hơn
+                            do cần lưu trú qua đêm.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Hà Tĩnh</td>
+                        <td>900.000đ – 1.200.000đ</td>
+                        <td>
+                            Tuỳ địa điểm và yêu cầu lưu trú.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Lai Châu</td>
+                        <td>800.000đ – 1.200.000đ</td>
+                        <td>
+                            Huyện xa trung tâm có thể cao hơn.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Bắc Giang</td>
+                        <td>500.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Hà Nam</td>
+                        <td>500.000đ</td>
+                        <td></td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- =====================================================
+             NOTES
+        ====================================================== -->
+
+        <div class="notes">
+
+
+            <div class="note">
+
+                <strong>
+                    Đi nhóm
+                </strong>
+
+                Book theo nhóm để chia sẻ
+                phụ phí di chuyển.
+
+            </div>
+
+
+            <div class="note">
+
+                <strong>
+                    Gói nhóm
+                </strong>
+
+                Gói nhóm kỷ yếu 2–4 người không
+                tặng thêm thợ khi chụp ở tỉnh xa.
+
+            </div>
+
+
+            <div class="note">
+
+                <strong>
+                    Tỉnh xa
+                </strong>
+
+                Tỉnh xa không nhận chụp cá nhân
+                nửa ngày, chỉ nhận nhóm nếu
+                chụp nửa ngày.
+
+            </div>
+
+
+            <div class="note">
+
+                <strong>
+                    Nhóm 5–6 người
+                </strong>
+
+                Được tặng 1 thợ khi đi tỉnh,
+                tính phụ phí di chuyển cho 2 thợ.
+
+            </div>
+
+
+            <div class="note">
+
+                <strong>
+                    Phụ phí có thể thay đổi
+                </strong>
+
+                Mức hiển thị chỉ là tham khảo.
+                Thợ sẽ báo chính xác theo địa điểm.
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     EVENING
+============================================================= -->
+
+<section class="evening">
+
+    <div class="container">
+
+        <div class="evening-box">
+
+            <div>
+
+                <h2 class="evening-title">
+                    Chụp thêm buổi tối
+                </h2>
+
+                <p class="evening-text">
+                    Áp dụng khi chụp đến 20h.
+                </p>
+
+            </div>
+
+
+            <div class="evening-price">
+                +500.000đ
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     CTA
+============================================================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-inner">
+
+            <div>
+
+                <h2 class="cta-title">
+                    Giá cuối phụ thuộc
+                    vào buổi chụp.
+                </h2>
+
+                <p class="cta-text">
+                    Chọn photographer, ngày chụp,
+                    số người và địa điểm.
+                    Studio sẽ xác nhận giá chính xác
+                    trước khi bạn đặt lịch.
+                </p>
+
+            </div>
+
+
+            <a
+                href="./lien-he.html"
+                class="cta-button"
+            >
+                Đặt lịch →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =============================================================
+     FOOTER
+============================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+
+            <div class="footer-copy">
+                © NAGIH GRAPHY
+            </div>
+
+
+            <div class="footer-links">
+
+                <a
+                    href="./tho.html"
+                    class="footer-link"
+                >
+                    Chọn thợ
+                </a>
+
+
+                <a
+                    href="./bang-gia.html"
+                    class="footer-link"
+                >
+                    Bảng giá
+                </a>
+
+
+                <a
+                    href="./lien-he.html"
+                    class="footer-link"
+                >
+                    Đặt lịch
+                </a>
+
+
+                <a
+                    href="https://zalo.me/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Zalo
+                </a>
+
+
+                <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Messenger
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener"
+                    class="footer-link"
+                >
+                    Instagram
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =============================================================
+     JAVASCRIPT
+============================================================= -->
+
+
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./data/photographers.js" defer></script>
+<script src="./data/data-source.js" defer></script>
+    <script src="./assets/js/bang-gia.js" defer></script>
+</body>
+
+</html>
