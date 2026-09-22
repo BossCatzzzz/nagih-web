@@ -1,4 +1,3 @@
-NAGIH_DATA.ready.then(({ photographers }) => {
 const searchInput = document.getElementById('searchInput');
 const resetButton = document.getElementById('resetButton');
 const filterButtons = document.querySelectorAll('.filter-chip');
@@ -9,6 +8,7 @@ const emptyState = document.getElementById('emptyState');
 const requestedCategory = new URLSearchParams(window.location.search).get('category');
 const validCategories = new Set([...filterButtons].map(button => button.dataset.filter));
 let activeFilter = validCategories.has(requestedCategory) ? requestedCategory : 'all';
+let photographers = [];
 
 function photographerHref(p) {
   return p.profile
@@ -24,10 +24,7 @@ function photographerImagePath(p, filename) {
 
 function renderCardImage(p) {
   const src = photographerImagePath(p, p.avatar);
-  if (!src) {
-    return `<div class="photographer-image"><div class="image-placeholder">${p.name.toUpperCase()}</div></div>`;
-  }
-
+  if (!src) return `<div class="photographer-image"><div class="image-placeholder">${p.name.toUpperCase()}</div></div>`;
   return `<div class="photographer-image">
     <img src="${src}" alt="${p.name}" loading="lazy" data-photographer-image="${p.slug}">
     <div class="image-placeholder" hidden>${p.name.toUpperCase()}</div>
@@ -56,7 +53,6 @@ function renderPhotographers(list) {
       </div>
     </a>
   `).join('');
-
   attachImageFallbacks();
 }
 
@@ -67,7 +63,6 @@ function filterPhotographers() {
     const matchFilter = activeFilter === 'all' || p.categories.includes(activeFilter);
     return matchSearch && matchFilter;
   });
-
   renderPhotographers(filtered);
   resultCount.textContent = `${filtered.length} photographer`;
   emptyState.classList.toggle('show', filtered.length === 0);
@@ -84,7 +79,6 @@ filterButtons.forEach(button => {
 });
 
 searchInput.addEventListener('input', filterPhotographers);
-
 resetButton.addEventListener('click', () => {
   searchInput.value = '';
   activeFilter = 'all';
@@ -92,6 +86,13 @@ resetButton.addEventListener('click', () => {
   filterPhotographers();
 });
 
-filterPhotographers();
-
+if (window.NAGIH_DATA?.ready) {
+  window.NAGIH_DATA.ready.then(({ photographers: data }) => {
+    photographers = data;
+    filterPhotographers();
+  });
+}
+window.addEventListener('nagih:data-updated', event => {
+  photographers = event.detail.photographers;
+  filterPhotographers();
 });

@@ -59,9 +59,12 @@ function renderFeatured(photographers) {
   });
 }
 
-if (window.NAGIH_DATA?.ready) {
-  window.NAGIH_DATA.ready.then(({ photographers }) => {
-    renderStats(photographers);
-    renderFeatured(photographers);
-  });
+function renderHome(photographers) {
+  renderStats(photographers);
+  renderFeatured(photographers);
 }
+
+if (window.NAGIH_DATA?.ready) {
+  window.NAGIH_DATA.ready.then(({ photographers }) => renderHome(photographers));
+}
+window.addEventListener('nagih:data-updated', event => renderHome(event.detail.photographers));
