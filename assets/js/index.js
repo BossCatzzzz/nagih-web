@@ -1,4 +1,5 @@
 const featuredGrid = document.getElementById('featuredPhotographers');
+const heroPhotographerButton = document.getElementById('heroPhotographerButton');
 
 function featuredImagePath(p) {
   if (!p.avatar) return '';
@@ -10,8 +11,12 @@ function featuredHref(p) {
   return p.profile ? (p.slug === 'cat' ? './tho/cat.html' : `./tho/profile.html?tho=${encodeURIComponent(p.slug)}`) : './tho.html';
 }
 
+function getRealPhotographers(photographers) {
+  return photographers.filter(p => p && p.profile && !p.placeholder && p.active !== false);
+}
+
 function renderStats(photographers) {
-  const active = photographers.filter(p => p && p.profile && !p.placeholder && p.active !== false);
+  const active = getRealPhotographers(photographers);
   const totalPhotographers = active.length;
   const totalShoots = active.reduce((sum, p) => sum + (Number(p.shoots) || 0), 0);
   const prices = active
@@ -26,11 +31,15 @@ function renderStats(photographers) {
   if (photographerEl) photographerEl.textContent = totalPhotographers.toLocaleString('vi-VN');
   if (shootsEl) shootsEl.textContent = totalShoots.toLocaleString('vi-VN');
   if (priceEl) priceEl.textContent = minPrice ? `${minPrice.toLocaleString('vi-VN')}đ` : '—';
+
+  if (heroPhotographerButton) {
+    heroPhotographerButton.textContent = `Xem ${totalPhotographers.toLocaleString('vi-VN')} thợ`;
+  }
 }
 
 function renderFeatured(photographers) {
   if (!featuredGrid) return;
-  const list = photographers.filter(p => p && p.featured === true).slice(0, 4);
+  const list = photographers.filter(p => p && p.featured === true && p.active !== false && p.profile && !p.placeholder).slice(0, 4);
 
   featuredGrid.innerHTML = list.map(p => {
     const src = featuredImagePath(p);

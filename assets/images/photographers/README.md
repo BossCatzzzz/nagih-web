@@ -1,8 +1,6 @@
 # Photographer images
 
-Mỗi photographer có một thư mục theo `slug`: `cat`, `bear`, `wolf`, ...
-
-## Cấu trúc chuẩn
+Mỗi photographer có một thư mục theo `slug`, ví dụ:
 
 ```text
 assets/images/photographers/cat/
@@ -14,21 +12,45 @@ assets/images/photographers/cat/
 └── gallery-04.jpg
 ```
 
-- `avatar.jpg`: ảnh đại diện nhỏ, dùng trên card chọn thợ và card photographer nổi bật ở landing page.
-- `cover.jpg`: ảnh cover/banner ở đầu trang profile.
-- `gallery-01.jpg`, `gallery-02.jpg`, ...: ảnh portfolio trong profile.
+## 1. Dùng ảnh trong project
 
-Đổi photographer chỉ cần đổi tên thư mục theo `slug` và cập nhật `data/photographers.js`.
+Trong Google Sheet điền đúng tên file:
 
-Nếu chưa có ảnh, để `avatar` hoặc `cover` rỗng trong data để giao diện dùng placeholder.
+- `avatar` → `avatar.jpg`
+- `cover` → `cover.jpg`
+- `gallery` → `gallery-01.jpg|gallery-02.jpg|...`
 
+Website tự ghép đường dẫn:
 
-## Cat hiện tại
+```text
+assets/images/photographers/<slug>/<filename>
+```
 
-Cat dùng 6 file ảnh theo chuẩn:
+## 2. Dùng ảnh từ bên ngoài
 
-- avatar.jpg — ảnh đại diện card photographer
-- cover.jpg — ảnh cover đầu trang profile
-- gallery-01.jpg ... gallery-04.jpg — 4 ảnh portfolio
+Các trường `avatar`, `cover` và từng phần tử trong `gallery` cũng chấp nhận **URL ảnh trực tiếp**:
 
-Các photographer khác dùng cùng quy tắc.
+```text
+https://example.com/cat/avatar.jpg
+https://example.com/cat/cover.jpg
+https://example.com/cat/gallery-01.jpg
+```
+
+Không dùng link trang xem ảnh/album như Google Drive `/file/d/.../view`; phải là URL trả trực tiếp về file ảnh hoặc một CDN ảnh.
+
+Ví dụ `gallery` trong Sheet:
+
+```text
+https://cdn.example.com/cat/01.jpg|https://cdn.example.com/cat/02.jpg|https://cdn.example.com/cat/03.jpg
+```
+
+## 3. Quy trình thêm photographer
+
+1. Tạo `slug` duy nhất.
+2. Tạo thư mục `assets/images/photographers/<slug>/` nếu dùng ảnh local.
+3. Đặt ảnh vào đó **hoặc** dùng URL ảnh trực tiếp trong Sheet.
+4. Điền `avatar`, `cover`, `gallery` trong Sheet.
+5. Chạy sync để `latest.json` nhận dữ liệu.
+6. Website sẽ dùng cùng dữ liệu cho card, landing page và profile.
+
+`avatar` dùng cho card; `cover` dùng cho profile; `gallery` dùng cho portfolio.
