@@ -16,9 +16,9 @@
   // Example: https://script.google.com/macros/s/XXXXXXXX/exec
   const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbzrsEcjNERb_s7jj1XLGZDXPA7COSaWBXDCSwxG7TABxRtNo6nE3JPk_jqyYpqbsCn_/exec';
 
-  const localPhotographers = (typeof photographers !== 'undefined' && Array.isArray(photographers))
-    ? photographers
-    : [];
+  // No legacy global photographer dataset is used anymore.
+  // latest.json is the initial source; Google Sheets is the background refresh source.
+  const localPhotographers = [];
 
   function normalizePhotographer(p) {
     if (!p || typeof p !== 'object') return null;
@@ -95,16 +95,16 @@
       photographers: snapshot
     }))
     .catch(error => {
-      console.warn('[NAGIH DATA] Không tải được latest.json, dùng photographers.js fallback:', error);
+      console.warn('[NAGIH DATA] Không tải được latest.json; không có local photographer fallback:', error);
       return {
-        source: 'local-fallback',
-        photographers: normalizeList(localPhotographers)
+        source: 'empty-fallback',
+        photographers: []
       };
     });
 
   window.NAGIH_DATA = {
     source: 'loading',
-    photographers: normalizeList(localPhotographers),
+    photographers: [],
     ready: snapshotReady,
     refresh: Promise.resolve(null)
   };

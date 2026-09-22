@@ -27,3 +27,14 @@ See `assets/images/photographers/README.md` for image rules.
 ## Important
 
 Do not put private API credentials in frontend files. The Apps Script `/exec` URL is public/read-only.
+## V14 data architecture
+
+Runtime pages no longer load `data/photographers.js`. The legacy hard-coded photographer dataset has been removed to prevent duplicate global declarations and conflicting data sources.
+
+Runtime flow:
+1. `latest.json` is loaded first for the fast initial render.
+2. Google Sheets Apps Script API is requested in the background.
+3. If the live data differs, `nagih:data-updated` refreshes the current page.
+
+Keep the public Apps Script `/exec` URL configured in `data/data-source.js` when deploying. Do not put private credentials in client-side code.
+

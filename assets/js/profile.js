@@ -1,4 +1,4 @@
-let photographers = [];
+let photographerList = [];
 let photographer = null;
 const slug = document.body.dataset.photographer || new URLSearchParams(window.location.search).get('tho') || 'cat';
 
@@ -73,8 +73,8 @@ function renderAlbum() {
 }
 
 function renderProfile(data) {
-  photographers = data;
-  photographer = photographers.find(p => p.slug === slug);
+  photographerList = Array.isArray(data) ? data : [];
+  photographer = photographerList.find(p => p.slug === slug);
   if (!photographer) {
     document.querySelector('main').innerHTML = '<div class="container"><p>Không tìm thấy photographer.</p></div>';
     return;
