@@ -14,7 +14,7 @@
 (function () {
   // Paste the SAME public Apps Script /exec URL used by GitHub Actions.
   // Example: https://script.google.com/macros/s/XXXXXXXX/exec
-  const GOOGLE_SHEETS_API_URL = '';
+  const GOOGLE_SHEETS_API_URL = 'https://script.google.com/macros/s/AKfycbzrsEcjNERb_s7jj1XLGZDXPA7COSaWBXDCSwxG7TABxRtNo6nE3JPk_jqyYpqbsCn_/exec';
 
   const localPhotographers = (typeof photographers !== 'undefined' && Array.isArray(photographers))
     ? photographers
