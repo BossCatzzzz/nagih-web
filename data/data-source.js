@@ -73,6 +73,41 @@
     };
   }
 
+  const CLIENT_CACHE_KEY = 'demo_studio_data_cache_v1';
+
+  function readClientCache() {
+    try {
+      const raw = localStorage.getItem(CLIENT_CACHE_KEY);
+      if (!raw) return null;
+
+      const cached = JSON.parse(raw);
+      if (!cached || cached.version !== 1 || !cached.payload) return null;
+
+      const payload = normalizePayload(cached.payload);
+      if (!Array.isArray(payload.photographers)) return null;
+
+      return payload;
+    } catch (error) {
+      console.warn('[DEMO DATA] Client cache không hợp lệ; bỏ qua cache:', error);
+      try { localStorage.removeItem(CLIENT_CACHE_KEY); } catch (_) {}
+      return null;
+    }
+  }
+
+  function writeClientCache(payload) {
+    try {
+      const cleanPayload = normalizePayload(payload);
+      localStorage.setItem(CLIENT_CACHE_KEY, JSON.stringify({
+        version: 1,
+        cachedAt: new Date().toISOString(),
+        payload: cleanPayload
+      }));
+    } catch (error) {
+      // Cache is an optimization. A quota/privacy error must never break the site.
+      console.warn('[DEMO DATA] Không thể lưu client cache:', error);
+    }
+  }
+
   function latestDataUrl() {
     const script = document.currentScript;
     return script ? new URL('latest.json', script.src).href : './data/latest.json';
@@ -97,12 +132,20 @@
 
   function fingerprint(payload) { return JSON.stringify(payload); }
 
-  const snapshotReady = loadStaticSnapshot()
-    .then(snapshot => ({ source: 'static-json', ...snapshot }))
-    .catch(error => {
-      console.warn('[DEMO DATA] Không tải được latest.json:', error);
-      return { source: 'empty-fallback', photographers: [], priceTiers: [], travelFees: [] };
-    });
+  // Persistent client cache is the fastest path on repeat visits/reloads.
+  // If no valid cache exists, fall back to latest.json.
+  const cachedSnapshot = readClientCache();
+  const snapshotReady = cachedSnapshot
+    ? Promise.resolve({ source: 'client-cache', ...cachedSnapshot })
+    : loadStaticSnapshot()
+        .then(snapshot => {
+          writeClientCache(snapshot);
+          return { source: 'static-json', ...snapshot };
+        })
+        .catch(error => {
+          console.warn('[DEMO DATA] Không tải được latest.json:', error);
+          return { source: 'empty-fallback', photographers: [], priceTiers: [], travelFees: [] };
+        });
 
   window.DEMO_DATA = {
     source: 'loading', photographers: [], priceTiers: [], travelFees: [],
@@ -117,6 +160,7 @@
     console.info(`[DEMO DATA] initial=${snapshot.source}, photographers=${snapshot.photographers.length}, priceTiers=${snapshot.priceTiers.length}, travelFees=${snapshot.travelFees.length}`);
 
     if (!GOOGLE_SHEETS_API_URL.trim()) return;
+
     const before = fingerprint(snapshot);
     window.DEMO_DATA.refresh = loadGoogleSheets(snapshot).then(fresh => {
       const after = fingerprint(fresh);
@@ -124,6 +168,8 @@
         console.info('[DEMO DATA] Google Sheets: không có thay đổi.');
         return;
       }
+
+      writeClientCache(fresh);
       window.DEMO_DATA.source = 'google-sheets-live';
       window.DEMO_DATA.photographers = fresh.photographers;
       window.DEMO_DATA.priceTiers = fresh.priceTiers;
@@ -131,7 +177,7 @@
       console.info(`[DEMO DATA] Google Sheets có dữ liệu mới: photographers=${fresh.photographers.length}, priceTiers=${fresh.priceTiers.length}, travelFees=${fresh.travelFees.length}`);
       window.dispatchEvent(new CustomEvent('demo:data-updated', { detail: fresh }));
     }).catch(error => {
-      console.warn('[DEMO DATA] Google Sheets background refresh thất bại; giữ latest.json:', error);
+      console.warn('[DEMO DATA] Google Sheets background refresh thất bại; giữ dữ liệu hiện tại:', error);
     });
   });
 })();

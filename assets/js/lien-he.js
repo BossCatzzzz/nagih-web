@@ -78,23 +78,41 @@ document.querySelectorAll('.people-button').forEach(button => {
   element.addEventListener('change', updateMessage);
 });
 
+async function copyMessageToClipboard(message) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(message);
+    return;
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = message;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  const copied = document.execCommand('copy');
+  textarea.remove();
+  if (!copied) throw new Error('Không thể sao chép vào clipboard.');
+}
+
 copyButton?.addEventListener('click', async () => {
   const message = buildMessage();
   try {
-    await navigator.clipboard.writeText(message);
+    await copyMessageToClipboard(message);
     copyButton.textContent = 'Đã sao chép ✓';
     copyButton.classList.add('copied');
-    setTimeout(() => { copyButton.textContent = 'Sao chép'; copyButton.classList.remove('copied'); }, 1800);
   } catch (error) {
-    const textarea = document.createElement('textarea');
-    textarea.value = message;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    textarea.remove();
-    copyButton.textContent = 'Đã sao chép ✓';
-    setTimeout(() => { copyButton.textContent = 'Sao chép'; }, 1800);
+    console.warn('[DEMO BOOKING] Sao chép thất bại:', error);
+    copyButton.textContent = 'Không thể sao chép';
+    copyButton.classList.remove('copied');
   }
+
+  setTimeout(() => {
+    copyButton.textContent = 'Sao chép';
+    copyButton.classList.remove('copied');
+  }, 1800);
 });
 
 if (window.DEMO_DATA?.ready) {
