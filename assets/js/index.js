@@ -1,3 +1,21 @@
+/* v20 — Homepage visuals. Replace ONLY the 3 URLs below with your image links. */
+const INDEX_VISUALS = {
+  showcase: '', // Ảnh portfolio/khách hàng cũ — URL trực tiếp
+  travel: '',   // Ảnh địa danh — URL trực tiếp
+  workflow: ''  // Ảnh booking/mood — URL trực tiếp
+};
+
+function applyIndexVisual(key) {
+  const el = document.querySelector(`[data-index-visual="${key}"]`);
+  const url = INDEX_VISUALS[key];
+  if (!el || !url) return;
+  el.classList.add('has-image');
+  el.style.backgroundImage = `url("${url}")`;
+  const placeholder = el.querySelector('.editorial-placeholder,.travel-visual-placeholder,.workflow-visual-placeholder');
+  if (placeholder) placeholder.hidden = true;
+}
+Object.keys(INDEX_VISUALS).forEach(applyIndexVisual);
+
 const featuredGrid = document.getElementById('featuredPhotographers');
 const heroPhotographerButton = document.getElementById('heroPhotographerButton');
 

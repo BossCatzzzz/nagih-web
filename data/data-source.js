@@ -8,7 +8,7 @@
 
   function sanitizeBrand(value) {
     if (typeof value === 'string') {
-      return value.replace(/NAGIH GRAPHY|NAGIH/gi, 'demo studio');
+      return value.replace(/demo studio|demo studio/gi, 'demo studio');
     }
     if (Array.isArray(value)) return value.map(sanitizeBrand);
     if (value && typeof value === 'object') {
