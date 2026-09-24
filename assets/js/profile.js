@@ -88,6 +88,8 @@ function renderProfile(data) {
   setText('[data-profile="style"]', photographer.style, 'Phong cách riêng của photographer sẽ được cập nhật tại đây.');
   setText('[data-profile="description"]', photographer.description, 'Thông tin chi tiết của photographer sẽ được cập nhật.');
   setText('[data-profile="breadcrumb"]', photographer.name);
+  setText('[data-profile="visual-name"]', photographer.name);
+  setText('[data-profile="visual-city"]', photographer.city);
   document.querySelectorAll('[data-profile="tags"]').forEach(el => { el.innerHTML = (photographer.tags || []).map(t => `<span class="tag">${t}</span>`).join(''); });
   renderProfileVisuals();
   renderGallery(photographer.gallery);

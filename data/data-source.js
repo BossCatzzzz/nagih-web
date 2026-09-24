@@ -73,7 +73,8 @@
     };
   }
 
-  const CLIENT_CACHE_KEY = 'demo_studio_data_cache_v1';
+  const CLIENT_CACHE_KEY = 'demo_studio_data_cache_v2';
+  const CLIENT_CACHE_VERSION = 2;
 
   function readClientCache() {
     try {
@@ -81,7 +82,7 @@
       if (!raw) return null;
 
       const cached = JSON.parse(raw);
-      if (!cached || cached.version !== 1 || !cached.payload) return null;
+      if (!cached || cached.version !== CLIENT_CACHE_VERSION || !cached.payload) return null;
 
       const payload = normalizePayload(cached.payload);
       if (!Array.isArray(payload.photographers)) return null;
@@ -98,10 +99,11 @@
     try {
       const cleanPayload = normalizePayload(payload);
       localStorage.setItem(CLIENT_CACHE_KEY, JSON.stringify({
-        version: 1,
+        version: CLIENT_CACHE_VERSION,
         cachedAt: new Date().toISOString(),
         payload: cleanPayload
       }));
+      console.info('[DEMO DATA] Client cache đã lưu:', CLIENT_CACHE_KEY);
     } catch (error) {
       // Cache is an optimization. A quota/privacy error must never break the site.
       console.warn('[DEMO DATA] Không thể lưu client cache:', error);
@@ -165,7 +167,8 @@
     window.DEMO_DATA.refresh = loadGoogleSheets(snapshot).then(fresh => {
       const after = fingerprint(fresh);
       if (after === before) {
-        console.info('[DEMO DATA] Google Sheets: không có thay đổi.');
+        writeClientCache(fresh);
+        console.info('[DEMO DATA] Google Sheets: không có thay đổi; client cache đã được xác nhận.');
         return;
       }
 
